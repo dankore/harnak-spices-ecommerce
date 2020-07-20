@@ -47,6 +47,10 @@ config = {
             ],
           },
         },
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
       },
       { test: /\.css$/, use: "css-loader" },
     ],
