@@ -1,14 +1,9 @@
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import fs from 'fs';
-
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import fs from "fs";
 
 function RENDER_THIS_HTML() {
-  return (
-    <div>
-        Hello from generate html
-    </div>
-  );
+  return <></>;
 }
 
 function html(x) {
@@ -33,15 +28,12 @@ function html(x) {
   `;
 }
 
-
 const reactHtml = ReactDOMServer.renderToString(<RENDER_THIS_HTML />);
-
 
 const overallHtmlString = html(reactHtml);
 
-
-const fileName = './app/index-template.html';
+const fileName = "./app/index-template.html";
 const stream = fs.createWriteStream(fileName);
-stream.once('open', () => {
+stream.once("open", () => {
   stream.end(overallHtmlString);
 });
