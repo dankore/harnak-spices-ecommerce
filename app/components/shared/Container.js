@@ -5,7 +5,7 @@ function Container(props) {
   return (
     <div
       style={{ minHeight: 500 + "px" }}
-      className="max-w-2xl mt-10 sm:mx-auto"
+      className="bg-white px-3"
     >
       {props.children}
     </div>
