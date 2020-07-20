@@ -47,7 +47,7 @@ config = {
             ],
           },
         },
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|gif)$/i,
         use: {
           loader: 'url-loader',
         },
