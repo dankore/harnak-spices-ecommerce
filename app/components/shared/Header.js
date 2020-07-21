@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="w-full bg-black text-white py-1">
+    <div className="w-full bg-black py-1">
       <div className="mx-auto shaodow-xl flex justify-between items-center px-4">
-        <Link className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img className="w-32 mr-2" src="./images/logo.PNG" />
         </Link>
-        <div className="flex items-center">
+        <input className="pl-2 py-1" type="text" placeholder="Search..." />
+        <div className="flex items-center text-white">
           <div className="mr-3">+234 803 404 2781</div>
           <div className="bg-black px-3 py-1">Sign Up</div>
         </div>
