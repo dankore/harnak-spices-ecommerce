@@ -42,12 +42,38 @@ function ViewSingleProduct() {
     return <div>Loading...</div>;
   }
 
-  console.log(singleProduct)
+  console.log(singleProduct);
 
   return (
     <Page title="Harnak Spices: Online Shopping for Spices">
       <h1 className="py-10 text-center">VIEW SINGLE</h1>
       {/* SINGLE PRODCTU HTML */}
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div>
+          <img className="w-56 h-56 mb-2" src={singleProduct.feed.image} />
+        </div>
+        <div>
+          {/* PRICE */}
+          <div className="flex justify-center">
+            <div>
+              <span className="text-red-600 block">
+                <span className="text-sm">Sale</span>{" "}
+                <span className="text-2xl font-bold">
+                  {singleProduct.feed.price}
+                </span>
+              </span>
+              <span className="text-sm text-gray-600 -mt-2 block">
+                Original: {(singleProduct.feed.price + 69).toFixed(2)}
+              </span>
+            </div>
+          </div>
+
+          {/* TITLE */}
+          <p className="text-center text-sm semi-bold mt-3">
+            {singleProduct.title}
+          </p>
+        </div>
+      </div>
     </Page>
   );
 }
