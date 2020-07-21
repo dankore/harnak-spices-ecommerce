@@ -22,11 +22,11 @@ function SingleProductHtml({ singleProduct }) {
       </div>
 
       {/* SINGLE PRODUCT HTML */}
-      <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-lg mx-auto border border-gray-200 p-4">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-lg mx-auto sm:border sm:border-gray-200 p-4">
         <div className="flex justify-center">
           <img
             onClick={() => appDispatch({ type: 'toggleImageViewer' })}
-            className="flex w-56 h-56 mb-2"
+            className="flex w-56 h-56 mb-2 cursor-pointer"
             src={singleProduct.image}
           />
         </div>
