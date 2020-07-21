@@ -11,16 +11,12 @@ import Header from "./components/shared/Header";
 import Homepage from "./pages/Homepage";
 import { useImmerReducer } from "use-immer";
 
-
-
 function Main() {
-  const initialState = {
-
-  };
+  const initialState = {};
 
   function appReducer(draft, action) {
     switch (action.type) {
-      case 'login':
+      case "login":
         return;
     }
   }
@@ -33,7 +29,7 @@ function Main() {
         <BrowserRouter>
           <div>
             <Header />
-            <Route path='/'>
+            <Route path="/">
               <Homepage />
             </Route>
             <Footer />

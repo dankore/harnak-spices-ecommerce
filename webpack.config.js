@@ -35,6 +35,7 @@ config = {
   mode: "development",
   module: {
     rules: [
+      // JS LOADER
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
@@ -47,12 +48,11 @@ config = {
             ],
           },
         },
-        test: /\.(jpg|png|gif)$/i,
-        use: {
-          loader: 'url-loader',
-        },
       },
+      // CSS LOADER
       { test: /\.css$/, use: "css-loader" },
+      // IMAGE LOADER
+      { test: /\.(jpg|png|gif)$/i, use: "url-loader" },
     ],
   },
 };
