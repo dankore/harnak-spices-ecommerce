@@ -10,6 +10,7 @@ import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
 import Homepage from "./pages/Homepage";
 import { useImmerReducer } from "use-immer";
+import ViewSingleProduct from "./pages/ViewSingleProduct";
 
 function Main() {
   const initialState = {};
@@ -29,8 +30,11 @@ function Main() {
         <BrowserRouter>
           <div>
             <Header />
-            <Route path="/">
+            <Route exact path="/">
               <Homepage />
+            </Route>
+            <Route path="/product/:id">
+              <ViewSingleProduct />
             </Route>
             <Footer />
           </div>
