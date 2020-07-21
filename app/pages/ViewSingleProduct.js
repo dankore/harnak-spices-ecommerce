@@ -48,13 +48,13 @@ function ViewSingleProduct() {
     <Page title="Harnak Spices: Online Shopping for Spices">
       <h1 className="py-10 text-center">VIEW SINGLE</h1>
       {/* SINGLE PRODCTU HTML */}
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-lg">
+        <div className="flex justify-center">
           <img className="w-56 h-56 mb-2" src={singleProduct.feed.image} />
         </div>
-        <div>
+        <div className="">
           {/* PRICE */}
-          <div className="flex justify-center">
+          <div className="flex justify-left">
             <div>
               <span className="text-red-600 block">
                 <span className="text-sm">Sale</span>{" "}
@@ -69,9 +69,7 @@ function ViewSingleProduct() {
           </div>
 
           {/* TITLE */}
-          <p className="text-center text-sm semi-bold mt-3">
-            {singleProduct.title}
-          </p>
+          <p className="text-sm semi-bold mt-3">{singleProduct.feed.title}</p>
         </div>
       </div>
     </Page>
