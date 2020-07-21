@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Page from "../components/shared/Page";
 import Axios from "axios";
 import { useImmer } from "use-immer";
-import Products from "../components/shared/Products";
+import Products from "../components/products/Products";
 
 function Homepage() {
   const [products, setProducts] = useImmer({

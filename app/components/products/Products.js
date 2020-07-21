@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Page from "./Page";
+import Page from "../shared/Page";
 import { Link } from "react-router-dom";
 
 function Products({ products }) {

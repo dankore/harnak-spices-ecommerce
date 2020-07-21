@@ -46,7 +46,7 @@ function ViewSingleProduct() {
   console.log(singleProduct);
 
   return (
-    <Page title="Harnak Spices: Online Shopping for Spices">
+    <Page title={singleProduct.feed.title}>
       <SingleProductHtml singleProduct={singleProduct.feed} />
     </Page>
   );
