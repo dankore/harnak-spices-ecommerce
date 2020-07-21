@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Container(props) {
   return (
-    <div style={{ minHeight: 500 + "px" }} className="bg-white px-3">
+    <div style={{ minHeight: 500 + 'px' }} className="bg-white px-3">
       {props.children}
     </div>
   );

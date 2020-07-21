@@ -1,23 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 // STATE MANAGEMENT
-import StateContext from "./contextsProviders/StateContext";
-import DispatchContext from "./contextsProviders/DispatchContext";
+import StateContext from './contextsProviders/StateContext';
+import DispatchContext from './contextsProviders/DispatchContext';
 //COMPONENTS
-import Footer from "./components/shared/Footer";
-import Header from "./components/shared/Header";
-import Homepage from "./pages/Homepage";
-import { useImmerReducer } from "use-immer";
-import ViewSingleProduct from "./pages/ViewSingleProduct";
+import Footer from './components/shared/Footer';
+import Header from './components/shared/Header';
+import Homepage from './pages/Homepage';
+import { useImmerReducer } from 'use-immer';
+import ViewSingleProduct from './pages/ViewSingleProduct';
 
 function Main() {
-  const initialState = {};
+  const initialState = {
+    toggleImageViewer: false,
+  };
 
   function appReducer(draft, action) {
     switch (action.type) {
-      case "login":
+      case 'toggleImageViewer':
+        draft.toggleImageViewer = !draft.toggleImageViewer;
         return;
     }
   }
@@ -44,7 +47,7 @@ function Main() {
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById("app"));
+ReactDOM.render(<Main />, document.getElementById('app'));
 
 if (module.hot) {
   module.hot.accept();

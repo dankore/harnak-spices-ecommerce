@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import Page from "../components/shared/Page";
-import Axios from "axios";
-import { useImmer } from "use-immer";
-import Products from "../components/products/Products";
+import React, { useEffect } from 'react';
+import Page from '../components/shared/Page';
+import Axios from 'axios';
+import { useImmer } from 'use-immer';
+import Products from '../components/products/Products';
 
 function Homepage() {
   const [products, setProducts] = useImmer({
@@ -19,7 +19,7 @@ function Homepage() {
 
       (async function getProducts() {
         const response = await Axios.get(
-          "https://fakestoreapi.com/products?limit=5",
+          'https://fakestoreapi.com/products?limit=5',
           {
             cancelToken: request.token,
           }
@@ -42,8 +42,12 @@ function Homepage() {
 
   return (
     <Page title="Harnak Spices: Online Shopping for Spices">
-      <div className='flex justify-center'>
-        <input className="pl-2 py-1 mx-auto border border-gray-600 bg-gray-200" type="text" placeholder="Search..." />
+      <div className="flex justify-center">
+        <input
+          className="pl-2 py-1 mx-auto border border-gray-600 bg-gray-200"
+          type="text"
+          placeholder="Search..."
+        />
       </div>
       <h1 className="py-10 text-center">
         Welcome to Harnak Spices Online Store

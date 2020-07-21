@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,7 +8,7 @@ function Header() {
         <Link to="/" className="flex items-center">
           <img className="w-32 mr-2" src="./images/logo2.png" />
         </Link>
-       
+
         <div className="flex items-center">
           <div className="mr-3">
             Call, Text, WhatsApp me @ +234 803 404 2781

@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import Page from "../components/shared/Page";
-import Axios from "axios";
-import { useImmer } from "use-immer";
-import { useParams } from "react-router-dom";
-import SingleProductHtml from "../components/products/SingleProductHtml";
+import React, { useEffect } from 'react';
+import Page from '../components/shared/Page';
+import Axios from 'axios';
+import { useImmer } from 'use-immer';
+import { useParams } from 'react-router-dom';
+import SingleProductHtml from '../components/products/SingleProductHtml';
 
 function ViewSingleProduct() {
   const { id } = useParams();
@@ -42,8 +42,6 @@ function ViewSingleProduct() {
   if (singleProduct.isLoading) {
     return <div>Loading...</div>;
   }
-
-  console.log(singleProduct);
 
   return (
     <Page title={singleProduct.feed.title}>

@@ -1,38 +1,38 @@
 /* global config:true */
 
 const currentTask = process.env.npm_lifecycle_event;
-const path = require("path");
-const Dotenv = require("dotenv-webpack");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const fse = require("fs-extra");
+const path = require('path');
+const Dotenv = require('dotenv-webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fse = require('fs-extra');
 
 class RunAfterCompile {
   apply(compiler) {
-    compiler.hooks.done.tap("Copy files", function () {
-      fse.copySync("./app/css/main.css", "./dist/css/main.css");
+    compiler.hooks.done.tap('Copy files', function () {
+      fse.copySync('./app/css/main.css', './dist/css/main.css');
     });
   }
 }
 
 config = {
-  entry: "./app/Main.js",
+  entry: './app/Main.js',
   output: {
-    publicPath: "/",
-    path: path.resolve(__dirname, "app"),
-    filename: "bundled.js",
+    publicPath: '/',
+    path: path.resolve(__dirname, 'app'),
+    filename: 'bundled.js',
   },
   plugins: [
     new Dotenv(),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "app/index-template.html",
+      filename: 'index.html',
+      template: 'app/index-template.html',
       alwaysWriteToDisk: true,
     }),
     new HtmlWebpackHarddiskPlugin(),
   ],
-  mode: "development",
+  mode: 'development',
   module: {
     rules: [
       // JS LOADER
@@ -40,41 +40,41 @@ config = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-react",
-              ["@babel/preset-env", { targets: { node: "12" } }],
+              '@babel/preset-react',
+              ['@babel/preset-env', { targets: { node: '12' } }],
             ],
           },
         },
       },
       // CSS LOADER
-      { test: /\.css$/, use: "css-loader" },
+      { test: /\.css$/, use: 'css-loader' },
       // IMAGE LOADER
-      { test: /\.(jpg|png|gif)$/i, use: "url-loader" },
+      { test: /\.(jpg|png|gif)$/i, use: 'url-loader' },
     ],
   },
 };
 
-if (currentTask == "webpackDev" || currentTask == "dev") {
-  config.devtool = "source-map";
+if (currentTask == 'webpackDev' || currentTask == 'dev') {
+  config.devtool = 'source-map';
   config.devServer = {
     port: 3000,
-    contentBase: path.join(__dirname, "app"),
+    contentBase: path.join(__dirname, 'app'),
     hot: true,
-    historyApiFallback: { index: "index.html" },
+    historyApiFallback: { index: 'index.html' },
   };
 }
 
-if (currentTask == "webpackBuild") {
+if (currentTask == 'webpackBuild') {
   config.plugins.push(new CleanWebpackPlugin(), new RunAfterCompile());
-  config.mode = "production";
+  config.mode = 'production';
   config.output = {
-    publicPath: "/",
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].[chunkhash].js",
-    chunkFilename: "[name].[chunkhash].js",
+    publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
   };
 }
 

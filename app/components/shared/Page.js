@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import Container from "./Container";
-import PropTypes from "prop-types";
+import React, { useEffect } from 'react';
+import Container from './Container';
+import PropTypes from 'prop-types';
 
 function Page(props) {
   useEffect(() => {
@@ -13,7 +13,7 @@ function Page(props) {
 
 Page.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.node.isRequired,
+  title: PropTypes.any,
 };
 
 export default Page;
