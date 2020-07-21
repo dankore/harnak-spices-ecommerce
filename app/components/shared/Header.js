@@ -10,8 +10,9 @@ function Header() {
         </Link>
         <input className="pl-2 py-1" type="text" placeholder="Search..." />
         <div className="flex items-center text-white">
-          <div className="mr-3">+234 803 404 2781</div>
-          <div className="bg-black px-3 py-1">Sign Up</div>
+          <div className="mr-3">
+            Call, Text, WhatsApp me @ +234 803 404 2781
+          </div>
         </div>
       </div>
     </div>
