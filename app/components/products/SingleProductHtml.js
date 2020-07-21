@@ -5,22 +5,22 @@ function SingleProductHtml({ singleProduct }) {
   return (
     <>
       <div>
-        <h1 className="pt-10 pb-3 text-2xl text-center">
+        <h1 className="py-10 text-2xl text-center">
           {/* TITLE */}
           {singleProduct.title}
         </h1>
       </div>
 
       {/* SINGLE PRODUCT HTML */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-lg mx-auto">
-        <div>
-          <img className="w-56 h-56 mb-2" src={singleProduct.image} />
+      <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-lg mx-auto border border-gray-200 p-4">
+        <div className='flex justify-center'>
+          <img className="flex w-56 h-56 mb-2" src={singleProduct.image} />
         </div>
 
-        <div className="flex items-center">
+        <div className="flex justify-center items-center">
           <div>
             {/* PRICE */}
-            <div className="flex justify-left">
+            <div className="flex justify-center">
               <div>
                 <span className="text-red-600 block">
                   <span className="text-sm">Sale</span>{" "}

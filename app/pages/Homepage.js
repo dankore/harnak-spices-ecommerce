@@ -42,6 +42,9 @@ function Homepage() {
 
   return (
     <Page title="Harnak Spices: Online Shopping for Spices">
+      <div className='flex justify-center'>
+        <input className="pl-2 py-1 mx-auto border border-gray-600 bg-gray-200" type="text" placeholder="Search..." />
+      </div>
       <h1 className="py-10 text-center">
         Welcome to Harnak Spices Online Store
       </h1>
