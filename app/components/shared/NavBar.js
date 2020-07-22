@@ -9,7 +9,7 @@ function Navbar() {
   const appState = useContext(StateContext);
 
   return (
-    <nav className="bg-white relative">
+    <nav className="bg-white relative border-b">
       <div className="max-w-7xl mx-auto px-2 lg:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
@@ -69,7 +69,7 @@ function Navbar() {
               />
             </Link>
 
-            <div className="hidden lg:block lg:mx-auto">
+            <div className="hidden my-auto lg:block lg:mx-auto">
               <div className="flex items-center">
                 <p className="text-red-700 font-bold italic">Order Now:</p>
                 <div className="mx-3 flex items-center">
@@ -97,7 +97,6 @@ function Navbar() {
               </div>
             </div>
           </div>
-
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
             {/* <!-- Profile dropdown --> */}
             <div className="ml-3 relative">
