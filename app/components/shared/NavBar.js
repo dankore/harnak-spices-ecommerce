@@ -13,7 +13,7 @@ function Navbar() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none transition duration-150 ease-in-out"
               aria-label="Main menu"
               aria-expanded="false"
               onClick={() => appDispatch({ type: 'toggleHamburgerMenu' })}
@@ -138,15 +138,15 @@ function Navbar() {
       {appState.toggleHamburgerMenu && (
         <div className="block sm:hidden absolute bg-white inset-x-0 h-screen">
           <div className="px-2 pt-2 pb-3">
-            <div className="mr-3 flex items-center">
+            <div className="mb-5 flex items-center">
               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
             </div>
-            <div className="mr-3 flex items-center">
+            <div className="mb-5 flex items-center">
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
             </div>
-            <div className="mr-3 flex items-center">
+            <div className="mb-5 flex items-center">
               <i className="text-4xl mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
             </div>
