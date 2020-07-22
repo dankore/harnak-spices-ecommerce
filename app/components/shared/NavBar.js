@@ -101,7 +101,7 @@ function Navbar() {
                   aria-haspopup="true"
                   onClick={() => appDispatch({ type: 'toggleProfileDropdown' })}
                 >
-                  <i className="far fa-user-circle text-3xl"></i>
+                  <i className="far fa-user-circle text-3xl text-gray-700"></i>
                 </button>
               </div>
               {appState.toggleProfileDropdown && (
@@ -148,14 +148,17 @@ function Navbar() {
               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
             </div>
-            <div className="mb-5 flex items-center">
+            <a
+              href="https://www.facebook.com/messages/t/harnaks"
+              className="mb-5 flex items-center"
+            >
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
-            </div>
-            <div className="mb-5 flex items-center">
+            </a>
+            <a href="tel:+2348034042781" className="mb-5 flex items-center">
               <i className="text-4xl mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
-            </div>
+            </a>
           </div>
         </div>
       )}
