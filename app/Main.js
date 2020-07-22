@@ -16,6 +16,7 @@ function Main() {
   const initialState = {
     toggleImageViewer: false,
     toggleProfileDropdown: false,
+    toggleHamburgerMenu: false,
   };
 
   function appReducer(draft, action) {
@@ -25,6 +26,9 @@ function Main() {
         return;
       case 'toggleProfileDropdown':
         draft.toggleProfileDropdown = !draft.toggleProfileDropdown;
+        return;
+      case 'toggleHamburgerMenu':
+        draft.toggleHamburgerMenu = !draft.toggleHamburgerMenu;
         return;
     }
   }
