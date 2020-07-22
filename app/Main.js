@@ -15,12 +15,16 @@ import ViewSingleProduct from './pages/ViewSingleProduct';
 function Main() {
   const initialState = {
     toggleImageViewer: false,
+    toggleProfileDropdown: false,
   };
 
   function appReducer(draft, action) {
     switch (action.type) {
       case 'toggleImageViewer':
         draft.toggleImageViewer = !draft.toggleImageViewer;
+        return;
+      case 'toggleProfileDropdown':
+        draft.toggleProfileDropdown = !draft.toggleProfileDropdown;
         return;
     }
   }
