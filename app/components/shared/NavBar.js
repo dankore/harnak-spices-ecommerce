@@ -70,22 +70,30 @@ function Navbar() {
             </Link>
 
             <div className="hidden lg:block lg:mx-auto">
-              <div className="flex">
-                <div className="mr-3 flex items-center">
+              <div className="flex items-center">
+                <p>Order through:</p>
+                <div className="mx-3 flex items-center">
                   <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
-                  <span>Order on WhatsApp</span>
+                  <span>WhatsApp</span>
                 </div>
                 <a
                   href="https://www.facebook.com/messages/t/harnaks"
                   className="mr-3 flex items-center"
                 >
                   <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
-                  <span>Order on Facebook</span>
+                  <span>Facebook</span>
                 </a>
-                <div className="mr-3 flex items-center">
-                  <i className="text-4xl mr-2 fas fa-phone-square"></i>
-                  <span>Order by Call: +234(0)803 404 2781</span>
-                </div>
+                <a
+                  href="mailto:harnakspices@gmail.com"
+                  className="mr-3 flex items-center"
+                >
+                  <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+                  <span>Email: harnakspices@gmail.com</span>
+                </a>
+                <a href="tel:+2348034042781" className="flex items-center">
+                  <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
+                  <span>Call: +234(0)803 404 2781</span>
+                </a>
               </div>
             </div>
           </div>
@@ -155,8 +163,15 @@ function Navbar() {
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
             </a>
+            <a
+              href="mailto:harnakspices@gmail.com"
+              className="mb-5 flex items-center"
+            >
+              <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+              <span>Order by Email: harnakspices@gmail.com</span>
+            </a>
             <a href="tel:+2348034042781" className="mb-5 flex items-center">
-              <i className="text-4xl mr-2 fas fa-phone-square"></i>
+              <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
             </a>
           </div>
