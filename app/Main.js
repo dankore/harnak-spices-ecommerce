@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { useImmerReducer } from 'use-immer';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // STATE MANAGEMENT
@@ -9,7 +10,6 @@ import DispatchContext from './contextsProviders/DispatchContext';
 import Footer from './components/shared/Footer';
 import Header from './components/shared/Header';
 import Homepage from './pages/Homepage';
-import { useImmerReducer } from 'use-immer';
 import ViewSingleProduct from './pages/ViewSingleProduct';
 
 function Main() {

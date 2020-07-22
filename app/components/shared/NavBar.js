@@ -58,12 +58,12 @@ function Navbar() {
             <Link to="/" className="flex-shrink-0">
               {/* <span className="block lg:hidden">Menu</span> */}
               <img
-                className="block lg:hidden h-8 w-auto"
+                className="block lg:hidden h-12 w-auto"
                 src={logo}
                 alt="Harnak Spices logo"
               />
               <img
-                className="hidden lg:block h-8 w-auto"
+                className="hidden lg:block h-12 w-auto"
                 src={logo}
                 alt="Harnak Spices logo"
               />
@@ -71,7 +71,7 @@ function Navbar() {
 
             <div className="hidden lg:block lg:mx-auto">
               <div className="flex items-center">
-                <p>Order through:</p>
+                <p className="text-red-700 font-bold italic">Order Now:</p>
                 <div className="mx-3 flex items-center">
                   <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                   <span>WhatsApp</span>
@@ -88,11 +88,11 @@ function Navbar() {
                   className="mr-3 flex items-center"
                 >
                   <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
-                  <span>Email: harnakspices@gmail.com</span>
+                  <span>harnakspices@gmail.com</span>
                 </a>
                 <a href="tel:+2348034042781" className="flex items-center">
                   <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
-                  <span>Call: +234(0)803 404 2781</span>
+                  <span>+234(0)803 404 2781</span>
                 </a>
               </div>
             </div>

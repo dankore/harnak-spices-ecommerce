@@ -3,6 +3,7 @@ import Page from '../components/shared/Page';
 import Axios from 'axios';
 import { useImmer } from 'use-immer';
 import Products from '../components/products/Products';
+import LoadingDotsAnimation from '../components/shared/LoadingDotsAnimation';
 
 function Homepage() {
   const [products, setProducts] = useImmer({
@@ -37,7 +38,7 @@ function Homepage() {
   }, []);
 
   if (products.isLoading) {
-    return <div>Loading...</div>;
+    return <LoadingDotsAnimation />;
   }
 
   return (

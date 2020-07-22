@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { useImmer } from 'use-immer';
 import { useParams } from 'react-router-dom';
 import SingleProductHtml from '../components/products/SingleProductHtml';
+import LoadingDotsAnimation from '../components/shared/LoadingDotsAnimation';
 
 function ViewSingleProduct() {
   const { id } = useParams();
@@ -40,7 +41,7 @@ function ViewSingleProduct() {
   }, []);
 
   if (singleProduct.isLoading) {
-    return <div>Loading...</div>;
+    return <LoadingDotsAnimation />;
   }
 
   return (
