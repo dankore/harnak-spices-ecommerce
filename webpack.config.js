@@ -52,7 +52,14 @@ config = {
       // CSS LOADER
       { test: /\.css$/, use: 'css-loader' },
       // IMAGE LOADER
-      { test: /\.(png|svg|jpg|jpeg|gif|tiff)$/, use: 'url-loader' },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 };

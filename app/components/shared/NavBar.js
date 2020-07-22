@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
 import { Link } from 'react-router-dom';
+import logo from '../../images/logo2.png';
 
 function Navbar() {
   const appDispatch = useContext(DispatchContext);
@@ -58,12 +59,12 @@ function Navbar() {
               {/* <span className="block lg:hidden">Menu</span> */}
               <img
                 className="block lg:hidden h-8 w-auto"
-                src="./images/logo2.png"
+                src={logo}
                 alt="Harnak Spices logo"
               />
               <img
                 className="hidden lg:block h-8 w-auto"
-                src="./images/logo2.png"
+                src={logo}
                 alt="Harnak Spices logo"
               />
             </Link>
@@ -72,12 +73,15 @@ function Navbar() {
               <div className="flex">
                 <div className="mr-3 flex items-center">
                   <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
-                  <span>Order on WhatsApp!!</span>
+                  <span>Order on WhatsApp</span>
                 </div>
-                <div className="mr-3 flex items-center">
+                <a
+                  href="https://www.facebook.com/messages/t/harnaks"
+                  className="mr-3 flex items-center"
+                >
                   <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                   <span>Order on Facebook</span>
-                </div>
+                </a>
                 <div className="mr-3 flex items-center">
                   <i className="text-4xl mr-2 fas fa-phone-square"></i>
                   <span>Order by Call: +234(0)803 404 2781</span>
