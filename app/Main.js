@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { useImmerReducer } from 'use-immer';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // STATE MANAGEMENT
 import StateContext from './contextsProviders/StateContext';
@@ -10,7 +10,8 @@ import DispatchContext from './contextsProviders/DispatchContext';
 import Footer from './components/shared/Footer';
 import Header from './components/shared/Header';
 import Homepage from './pages/Homepage';
-import ViewSingleProduct from './pages/ViewSingleProduct';
+import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
+const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 function Main() {
   const initialState = {
@@ -39,16 +40,18 @@ function Main() {
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
-          <div>
-            <Header />
-            <Route exact path="/">
-              <Homepage />
-            </Route>
-            <Route path="/product/:id">
-              <ViewSingleProduct />
-            </Route>
-            <Footer />
-          </div>
+          <Header />
+          <Suspense fallback={<LoadingDotsAnimation />}>
+            <Switch>
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+              <Route path="/product/:id">
+                <ViewSingleProduct />
+              </Route>
+            </Switch>
+          </Suspense>
+          <Footer />
         </BrowserRouter>
       </DispatchContext.Provider>
     </StateContext.Provider>
