@@ -9,7 +9,7 @@ function SingleProductHtml({ singleProduct }) {
   const appState = useContext(StateContext);
 
   return (
-    <>
+    <div className="py-10">
       {/* IMAGE VIEWER */}
       {appState.toggleImageViewer && (
         <ImageViewer image={singleProduct.image} title={singleProduct.title} />
@@ -48,7 +48,7 @@ function SingleProductHtml({ singleProduct }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

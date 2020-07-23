@@ -7,7 +7,7 @@ function Footer() {
   const appState = useContext(StateContext);
 
   return (
-    <div style={{ height: 50 + 'px' }} className="w-full flex pt-4 justify-center">
+    <div className="w-full flex pt-2 justify-center">
       {/* MODAL OVERLAY */}
       {appState && appState.toggleImageViewer && (
         <div
