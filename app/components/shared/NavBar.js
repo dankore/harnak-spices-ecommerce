@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo2.png';
+// import logo from '../../images/logo2.png';
 
 function Navbar() {
+  const logo =
+    'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/images/logo2.png';
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
@@ -21,7 +23,7 @@ function Navbar() {
               onClick={() => appDispatch({ type: 'toggleHamburgerMenu' })}
             >
               {/* HAMBURGER MENU */}
-              {!appState.toggleHamburgerMenu && (
+              {!appState?.toggleHamburgerMenu && (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
@@ -32,7 +34,7 @@ function Navbar() {
                 </svg>
               )}
               {/* X MENU */}
-              {appState.toggleHamburgerMenu && (
+              {appState?.toggleHamburgerMenu && (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
@@ -90,7 +92,7 @@ function Navbar() {
                   <i className="far fa-user-circle text-3xl text-gray-700"></i>
                 </button>
               </div>
-              {appState.toggleProfileDropdown && (
+              {appState?.toggleProfileDropdown && (
                 <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
                   <div
                     className="py-1 rounded-md bg-white shadow-xs"
@@ -127,7 +129,7 @@ function Navbar() {
         </div>
       </div>
 
-      {appState.toggleHamburgerMenu && (
+      {appState?.toggleHamburgerMenu && (
         <div className="block lg:hidden absolute bg-white inset-x-0 h-screen">
           <div className="px-2 pt-2 pb-3">
             <div className="mb-5 flex items-center">

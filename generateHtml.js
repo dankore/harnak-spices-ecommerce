@@ -1,9 +1,24 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import fs from 'fs';
+import Footer from './app/components/shared/Footer';
+import Header from './app/components/shared/Header';
+import LoadingDotsIcon from './app/components/shared/LoadingDotsAnimation';
+import { StaticRouter as Router } from 'react-router-dom';
+import StateContext from './app/contextsProviders/StateContext';
 
 function RENDER_THIS_HTML() {
-  return <></>;
+  return (
+    <StateContext.Provider>
+      <Router>
+        <Header />
+        <div>
+          <LoadingDotsIcon />
+        </div>
+        <Footer />
+      </Router>
+    </StateContext.Provider>
+  );
 }
 
 function html(x) {

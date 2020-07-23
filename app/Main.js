@@ -13,6 +13,8 @@ import Homepage from './pages/Homepage';
 import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
+console.log(process.env);
+
 function Main() {
   const initialState = {
     toggleImageViewer: false,

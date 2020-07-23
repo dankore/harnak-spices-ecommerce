@@ -1,5 +1,8 @@
 module.exports = {
-  purge: ['app/**/*.js', 'app/**/*.jsx'],
+  purge: {
+    mode: 'all',
+    content: ['./app/**/*.js', './app/**/*.jsx'],
+  },
   target: 'relaxed',
   prefix: '',
   important: false,
