@@ -11,6 +11,7 @@ import Footer from './components/shared/Footer';
 import Header from './components/shared/Header';
 import Homepage from './pages/Homepage';
 import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
+import SeoDefault from './components/shared/SeoDefault';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 console.log(process.env);
@@ -43,6 +44,7 @@ function Main() {
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
           <Header />
+          <SeoDefault />
           <Suspense fallback={<LoadingDotsAnimation />}>
             <Switch>
               <Route exact path="/">

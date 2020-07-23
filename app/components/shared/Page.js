@@ -45,10 +45,10 @@ function Page(props) {
 
 Page.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.any,
-  description: PropTypes.any,
-  image: PropTypes.any,
-  url: PropTypes.any,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default Page;
