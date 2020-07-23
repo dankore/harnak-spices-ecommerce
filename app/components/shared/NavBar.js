@@ -130,7 +130,7 @@ function Navbar() {
       </div>
 
       {appState?.toggleHamburgerMenu && (
-        <div className="block lg:hidden absolute bg-white inset-x-0 h-screen">
+        <div style={{ zIndex: 2 }} className="block lg:hidden absolute bg-white inset-x-0 h-screen">
           <div className="px-2 pt-2 pb-3">
             <div className="mb-5 flex items-center">
               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
