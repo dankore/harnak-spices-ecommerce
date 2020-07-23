@@ -9,11 +9,7 @@ function Products({ products }) {
       <div className="bg-white flex justify-around flex-wrap">
         {products.map((product) => {
           return (
-            <Link
-              to={`/product/${product.id}`}
-              className="w-56 my-10 lg:m-3"
-              key={product.id}
-            >
+            <Link to={`/product/${product.id}`} className="w-56 my-10 lg:m-3" key={product.id}>
               <img className="w-56 h-56 mb-2" src={product.image} />
 
               {/* PRICE */}
@@ -30,9 +26,7 @@ function Products({ products }) {
               </div>
 
               {/* TITLE */}
-              <p className="text-center text-sm semi-bold mt-3">
-                {product.title}
-              </p>
+              <p className="text-center text-sm semi-bold mt-3">{product.title}</p>
             </Link>
           );
         })}

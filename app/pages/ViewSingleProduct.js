@@ -20,14 +20,10 @@ function ViewSingleProduct() {
       setSingleProduct((draft) => {
         draft.isLoading = true;
       });
-
       (async function getSingleProduct() {
-        const response = await Axios.get(
-          `https://fakestoreapi.com/products/${id}`,
-          {
-            cancelToken: request.token,
-          }
-        );
+        const response = await Axios.get(`https://fakestoreapi.com/products/${id}`, {
+          cancelToken: request.token,
+        });
 
         setSingleProduct((draft) => {
           draft.isLoading = false;

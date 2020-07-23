@@ -30,7 +30,21 @@ module.exports = {
     mount: true,
   },
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true }],
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        singleQuote: true,
+        printWidth: 100,
+        tabWidth: 2,
+        useTabs: false,
+        trailingComma: 'es5',
+        bracketSpacing: true,
+        parser: 'flow',
+        endOfLine: 'auto',
+      },
+    ],
+    'no-warning-comments': 0,
   },
   settings: {
     react: {

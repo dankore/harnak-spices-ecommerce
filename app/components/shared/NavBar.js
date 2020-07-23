@@ -22,12 +22,7 @@ function Navbar() {
             >
               {/* HAMBURGER MENU */}
               {!appState.toggleHamburgerMenu && (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -38,12 +33,7 @@ function Navbar() {
               )}
               {/* X MENU */}
               {appState.toggleHamburgerMenu && (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -57,16 +47,8 @@ function Navbar() {
           <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
             <Link to="/" className="flex-shrink-0">
               {/* <span className="block lg:hidden">Menu</span> */}
-              <img
-                className="block lg:hidden h-12 w-auto"
-                src={logo}
-                alt="Harnak Spices logo"
-              />
-              <img
-                className="hidden lg:block h-12 w-auto"
-                src={logo}
-                alt="Harnak Spices logo"
-              />
+              <img className="block lg:hidden h-12 w-auto" src={logo} alt="Harnak Spices logo" />
+              <img className="hidden lg:block h-12 w-auto" src={logo} alt="Harnak Spices logo" />
             </Link>
 
             <div className="hidden my-auto lg:block lg:mx-auto">
@@ -83,10 +65,7 @@ function Navbar() {
                   <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                   <span>Facebook</span>
                 </a>
-                <a
-                  href="mailto:harnakspices@gmail.com"
-                  className="mr-3 flex items-center"
-                >
+                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex items-center">
                   <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
                   <span>harnakspices@gmail.com</span>
                 </a>
@@ -162,10 +141,7 @@ function Navbar() {
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
             </a>
-            <a
-              href="mailto:harnakspices@gmail.com"
-              className="mb-5 flex items-center"
-            >
+            <a href="mailto:harnakspices@gmail.com" className="mb-5 flex items-center">
               <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
               <span>Order by Email: harnakspices@gmail.com</span>
             </a>

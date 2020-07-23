@@ -17,14 +17,10 @@ function Homepage() {
       setProducts((draft) => {
         draft.isLoading = true;
       });
-
       (async function getProducts() {
-        const response = await Axios.get(
-          'https://fakestoreapi.com/products?limit=5',
-          {
-            cancelToken: request.token,
-          }
-        );
+        const response = await Axios.get('https://fakestoreapi.com/products?limit=5', {
+          cancelToken: request.token,
+        });
 
         setProducts((draft) => {
           draft.isLoading = false;
@@ -50,9 +46,7 @@ function Homepage() {
           placeholder="Search Harnak Online Store..."
         />
       </div>
-      <h1 className="py-10 text-center">
-        Welcome to Harnak Spices Online Store
-      </h1>
+      <h1 className="py-10 text-center">Welcome to Harnak Spices Online Store</h1>
       <Products products={products.feed} />
     </Page>
   );
