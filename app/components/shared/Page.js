@@ -39,7 +39,7 @@ function Page(props) {
 
 Page.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   url: PropTypes.string,

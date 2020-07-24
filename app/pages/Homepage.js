@@ -38,7 +38,7 @@ function Homepage() {
   }
 
   return (
-    <Page title="Harnak Spices: Shop Online for Spices">
+    <Page title="Harnak Spices: Shop Online for Natural, Healthy and Tasty Spices">
       <div className="max-w-lg mx-auto">
         {/* <input
           className="w-full pl-2 py-1 border border-gray-600 bg-gray-200"

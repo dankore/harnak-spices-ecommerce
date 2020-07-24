@@ -43,7 +43,7 @@ function Main() {
   }
 
   const [state, dispatch] = useImmerReducer(appReducer, initialState);
-  console.log(`%c Hello, my name is...not important`, 'font-size: 3em; color: green');
+  console.log(`%c Hello, my name is...not important`, 'font-size: 2em; color: green');
   console.log(process.env);
 
   return (

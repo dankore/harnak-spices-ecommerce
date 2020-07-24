@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const logo =
-    'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/assets/images/logo2.png';
-  const appDispatch = useContext(DispatchContext);
-  const appState = useContext(StateContext);
+    'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/assets/images/logo2.png',
+    appDispatch = useContext(DispatchContext),
+    appState = useContext(StateContext);
 
   return (
     <nav className="bg-white relative border-b">
@@ -78,10 +78,16 @@ function Navbar() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
-            {/* <!-- Profile dropdown --> */}
+            {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative">
               <div>
-                <button
+                <div
+                  className="flex items-center"
+                >
+                  <i className="text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
+                  <span> Suleja, Niger State</span>
+                </div>
+                {/* <button
                   className="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
                   id="user-menu"
                   aria-label="User menu"
@@ -89,9 +95,9 @@ function Navbar() {
                   onClick={() => appDispatch({ type: 'toggleProfileDropdown' })}
                 >
                   <i className="far fa-user-circle text-3xl text-gray-700"></i>
-                </button>
+                </button> */}
               </div>
-              {appState?.toggleProfileDropdown && (
+              {/* {appState?.toggleProfileDropdown && (
                 <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
                   <div
                     className="py-1 rounded-md bg-white shadow-xs"
@@ -122,7 +128,7 @@ function Navbar() {
                     </a>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
