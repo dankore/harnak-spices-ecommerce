@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-
-
 function Products({ products }) {
- 
   return (
     <div className="bg-white flex justify-around flex-wrap">
       {products.map((product) => {

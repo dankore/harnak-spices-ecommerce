@@ -63,6 +63,7 @@ config = {
   },
 };
 
+
 if (currentTask == 'webpackDev' || currentTask == 'dev') {
   config.devtool = 'source-map';
   config.devServer = {

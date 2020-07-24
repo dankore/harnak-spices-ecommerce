@@ -7,7 +7,6 @@ function SeoDefault() {
   const description = `Find the best African spices online.`;
   const title = `Shop online for your spices | Harnak Spices`;
 
-
   return (
     <>
       <Helmet>
