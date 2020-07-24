@@ -37,6 +37,7 @@ function Main() {
       case 'turnOff':
         draft.toggleHamburgerMenu = false;
         draft.toggleImageViewer = false;
+        draft.toggleProfileDropdown = false;
         return;
     }
   }

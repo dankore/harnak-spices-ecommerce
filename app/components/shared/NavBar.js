@@ -52,7 +52,7 @@ function Navbar() {
               <img className="hidden lg:block h-12 w-auto" src={logo} alt="Harnak Spices logo" />
             </Link>
 
-            <div className="hidden my-auto lg:block lg:mx-auto">
+            <div className="hidden my-auto lg:block lg:mx-auto text-sm">
               <div className="flex items-center">
                 <p className="text-red-700 font-bold italic">Order Now:</p>
                 <div className="mx-3 flex items-center">
