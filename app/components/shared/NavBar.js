@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
 import { Link } from 'react-router-dom';
-// import logo from '../../images/logo2.png';
 
 function Navbar() {
   const logo =

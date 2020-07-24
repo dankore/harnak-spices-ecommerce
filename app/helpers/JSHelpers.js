@@ -7,6 +7,5 @@ module.exports = {
       }
       return `${inputToArray.slice(0, 5).join(' ')}...`;
     }
-  }
-
-}
+  },
+};

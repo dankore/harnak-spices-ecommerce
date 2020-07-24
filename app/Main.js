@@ -34,6 +34,10 @@ function Main() {
       case 'toggleHamburgerMenu':
         draft.toggleHamburgerMenu = !draft.toggleHamburgerMenu;
         return;
+      case 'turnOff':
+        draft.toggleHamburgerMenu = false;
+        draft.toggleImageViewer = false;
+        return;
     }
   }
 
