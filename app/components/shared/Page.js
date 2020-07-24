@@ -2,21 +2,13 @@ import React, { useEffect } from 'react';
 import Container from './Container';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { formatTitleAndDescription } from '../../helpers/JSHelpers';
 
 function Page(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [props.title]);
 
-  function formatTitleAndDescription(s) {
-    if (s) {
-      const inputToArray = s.split(' ');
-      if (inputToArray.length < 6) {
-        return `${inputToArray.slice(0, 5).join(' ')}`;
-      }
-      return `${inputToArray.slice(0, 5).join(' ')}...`;
-    }
-  }
 
   return (
     <Container>
