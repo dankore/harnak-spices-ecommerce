@@ -10,8 +10,8 @@
     "webpackBuild": "webpack",
     "generate": "babel-node --presets=@babel/preset-react,@babel/preset-env generateHtml.js",
     "previewDist": "node previewDist",
-    "build:css": "postcss app/css/tailwind.css -o app/css/main.css",
-    "watch:css": "postcss app/css/tailwind.css -o app/css/main.css",
+    "build:css": "postcss app/assets/css/tailwind.css -o app/assets/css/main.css",
+    "watch:css": "postcss app/assets/css/tailwind.css -o app/assets/css/main.css",
     "lint": "eslint app",
     "lint:fix": "eslint --fix ."
   },

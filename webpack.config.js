@@ -11,7 +11,7 @@ const fse = require('fs-extra');
 class RunAfterCompile {
   apply(compiler) {
     compiler.hooks.done.tap('Copy files', function () {
-      fse.copySync('./app/css/main.css', './dist/css/main.css');
+      fse.copySync('./app/assets/css/main.css', './dist/assets/css/main.css');
     });
   }
 }
