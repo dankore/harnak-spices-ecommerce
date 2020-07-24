@@ -13,14 +13,15 @@
     "build:css": "postcss app/assets/css/tailwind.css -o app/assets/css/main.css",
     "watch:css": "postcss app/assets/css/tailwind.css -o app/assets/css/main.css",
     "lint": "eslint app",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "test_server": "node _tests_/test_server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dankore/harnak-spices-ecommerce.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["harnak spices", "spices", "african spices"],
+  "author": "Adamu Muhammad Dankore",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dankore/harnak-spices-ecommerce/issues"
