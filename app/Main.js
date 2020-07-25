@@ -19,6 +19,7 @@ function Main() {
     toggleImageViewer: false,
     toggleProfileDropdown: false,
     toggleHamburgerMenu: false,
+    item: {},
   };
 
   function appReducer(draft, action) {
@@ -36,6 +37,9 @@ function Main() {
         draft.toggleHamburgerMenu = false;
         draft.toggleImageViewer = false;
         draft.toggleProfileDropdown = false;
+        return;
+      case 'addItemToBasket':
+        draft.item = action.value;
         return;
     }
   }

@@ -8,6 +8,8 @@ function SingleProductHtml({ singleProduct }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
+  console.log(appState.item);
+
   return (
     <div className="py-10">
       {/* IMAGE VIEWER */}
@@ -45,6 +47,7 @@ function SingleProductHtml({ singleProduct }) {
                 </span>
               </div>
             </div>
+            <button onClick={() => appDispatch({ type: 'addItemToBasket', value: singleProduct })} className="bg-yellow-700 text-white w-full px-3 py-1 mt-5">Add to Basket!</button>
           </div>
         </div>
       </div>
