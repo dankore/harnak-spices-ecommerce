@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 class RunAfterCompile {
   apply(compiler) {
@@ -64,6 +65,7 @@ config = {
 };
 
 if (currentTask == 'webpackDev' || currentTask == 'dev') {
+  config.plugins.push(new ReactRefreshWebpackPlugin());
   config.devtool = 'source-map';
   config.devServer = {
     port: 3000,

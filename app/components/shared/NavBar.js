@@ -79,7 +79,7 @@ function Navbar() {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
             {/*  PROFILE DROPDOWN */}
-            <div className="ml-3 relative">
+            <div className="ml-3 relative hidden lg:block">
               <div>
                 <div className="flex items-center">
                   <i className="text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
@@ -154,6 +154,10 @@ function Navbar() {
               <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
             </a>
+            <div className="mb-5 flex items-center">
+              <i className="text-4xl lg:text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
+              <span> Suleja, Niger State</span>
+            </div>
           </div>
         </div>
       )}

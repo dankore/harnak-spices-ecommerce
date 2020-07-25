@@ -941,6 +941,10 @@ img {
     justify-content: flex-start;
   }
 
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+  }
+
   .lg\:m-3 {
     margin: 0.75rem;
   }

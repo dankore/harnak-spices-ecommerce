@@ -36,7 +36,6 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-   
     "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -64,6 +63,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.3.3",
     "autoprefixer": "^9.7.6",
     "css-loader": "^3.5.3",
     "eslint": "^7.5.0",
@@ -74,7 +75,7 @@
     "file-loader": "^6.0.0",
     "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.5.2",
-    "@fullhuman/postcss-purgecss": "^2.3.0"
+    "react-refresh": "^0.8.3",
+    "tailwindcss": "^1.5.2"
   }
 }
