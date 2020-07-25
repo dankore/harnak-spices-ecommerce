@@ -20,7 +20,11 @@
     "type": "git",
     "url": "git+https://github.com/dankore/harnak-spices-ecommerce.git"
   },
-  "keywords": ["harnak spices", "spices", "african spices"],
+  "keywords": [
+    "harnak spices",
+    "spices",
+    "african spices"
+  ],
   "author": "Adamu Muhammad Dankore",
   "license": "ISC",
   "bugs": {
@@ -32,6 +36,7 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+   
     "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -69,6 +74,7 @@
     "file-loader": "^6.0.0",
     "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.5.2"
+    "tailwindcss": "^1.5.2",
+    "@fullhuman/postcss-purgecss": "^2.3.0"
   }
 }

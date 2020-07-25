@@ -3,9 +3,6 @@ const http = require('http'),
   filename = __dirname + '/test.txt',
   readStream = fs.createReadStream(filename, { encoding: 'utf-8' });
 
-
-
-
 const server = http.createServer((req, res) => {
   if (req.url == '/') {
     readStream.on('data', (chunk) => {

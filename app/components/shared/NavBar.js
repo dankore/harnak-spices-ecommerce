@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const logo =
-    'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/assets/images/logo2.png',
+      'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/assets/images/logo2.png',
     appDispatch = useContext(DispatchContext),
     appState = useContext(StateContext);
 
@@ -81,9 +81,7 @@ function Navbar() {
             {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative">
               <div>
-                <div
-                  className="flex items-center"
-                >
+                <div className="flex items-center">
                   <i className="text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
                   <span> Suleja, Niger State</span>
                 </div>
