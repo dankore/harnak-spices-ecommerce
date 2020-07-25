@@ -14,8 +14,6 @@ import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 import SeoDefault from './components/shared/SeoDefault';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
-console.log(process.env);
-
 function Main() {
   const initialState = {
     toggleImageViewer: false,
@@ -44,7 +42,6 @@ function Main() {
 
   const [state, dispatch] = useImmerReducer(appReducer, initialState);
   console.log(`%c Hello, my name is...not important`, 'font-size: 2em; color: green');
-  console.log(process.env);
 
   return (
     <StateContext.Provider value={state}>

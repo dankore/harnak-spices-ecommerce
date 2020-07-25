@@ -10,6 +10,9 @@ function Homepage() {
     isLoading: false,
     feed: [],
   });
+  const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594491219/free-background-press-v2_pg66nf.svg`;
+  const description = `Find the best African spices online.`;
+  const title = `Shop online for your spices | Harnak Spices`;
 
   useEffect(() => {
     const request = Axios.CancelToken.source();
@@ -38,7 +41,7 @@ function Homepage() {
   }
 
   return (
-    <Page title="Harnak Spices: Shop Online for Natural, Healthy and Tasty Spices">
+    <Page title={title} image={image} description={description}>
       <div className="max-w-lg mx-auto">
         {/* <input
           className="w-full pl-2 py-1 border border-gray-600 bg-gray-200"
