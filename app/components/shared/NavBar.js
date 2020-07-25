@@ -79,7 +79,7 @@ function Navbar() {
           </div>
           <div className="text-sm absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
            <div className='block lg:hidden'>
-              <div className="flex items-center">
+              <div className="flex items-center cursor-pointer">
                 <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
                 <span>Basket</span>
               </div>
@@ -87,7 +87,7 @@ function Navbar() {
             {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative hidden lg:block">
               <div className='flex items-center'>
-                <div className="flex items-center mr-3">
+                <div className="flex items-center mr-3 cursor-pointer">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
                   <span>Basket</span>
                 </div>
