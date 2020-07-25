@@ -8,8 +8,6 @@ function SingleProductHtml({ singleProduct }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
-  console.log(appState.item);
-
   return (
     <div className="py-10">
       {/* IMAGE VIEWER */}
