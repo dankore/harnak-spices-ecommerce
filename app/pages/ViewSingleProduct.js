@@ -40,8 +40,11 @@ function ViewSingleProduct() {
     return <LoadingDotsAnimation />;
   }
 
+  const descriptionSEO = `SALE ${(singleProduct.feed.price + 69).toFixed(2)}! Price before sale: ${singleProduct.feed.price}.`
+
+
   return (
-    <Page title={singleProduct.feed.title}>
+    <Page title={singleProduct.feed.title} image={singleProduct.feed.image} description={descriptionSEO}>
       <SingleProductHtml singleProduct={singleProduct.feed} />
     </Page>
   );
