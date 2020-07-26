@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
@@ -7,6 +7,11 @@ import ImageViewer from '../shared/ImageViewer';
 function SingleProductHtml({ singleProduct }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
+
+  function handleAddItem() {
+    appDispatch({type: 'addToBasketCount'});
+    localStorage.pushArrayItem('basket', singleProduct);
+  }
 
   return (
     <div className="py-10">
@@ -45,7 +50,12 @@ function SingleProductHtml({ singleProduct }) {
                 </span>
               </div>
             </div>
-            <button onClick={() => appDispatch({ type: 'addItemToBasket', value: singleProduct })} className="bg-yellow-700 text-white w-full px-3 py-1 mt-5">Add to Basket</button>
+            <button
+              onClick={handleAddItem}
+              className="bg-yellow-700 text-white w-full px-3 py-1 mt-5"
+            >
+              Add to Basket
+            </button>
           </div>
         </div>
       </div>
