@@ -12,6 +12,7 @@ import Header from './components/shared/Header';
 import Homepage from './pages/Homepage';
 import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 import SeoDefault from './components/shared/SeoDefault';
+import BasketPage from './pages/BasketPage';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 function Main() {
@@ -108,9 +109,7 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    if (state.addToBasketCount) {
-      dispatch({ type: 'addItemToBasket', value: localStorage.getArray('basket') });
-    }
+    dispatch({ type: 'addItemToBasket', value: localStorage.getArray('basket') });
   }, [state.addToBasketCount]);
 
 
@@ -128,6 +127,9 @@ function Main() {
               </Route>
               <Route path="/product/:id">
                 <ViewSingleProduct />
+              </Route>
+              <Route path="/basket">
+                <BasketPage />
               </Route>
             </Switch>
           </Suspense>
