@@ -3,13 +3,21 @@ import Page from '../components/shared/Page';
 import StateContext from '../contextsProviders/StateContext';
 import { removeDuplicatesGetCount } from '../helpers/JSHelpers';
 import { useImmer } from 'use-immer';
+import DispatchContext from '../contextsProviders/DispatchContext';
+
 
 function BasketPage() {
+  const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
   const [state, seState] = useImmer({});
 
   function handleChange(e) {
-    console.log(e.target.value);
+    appDispatch({ type: 'addToBasketCount' });
+    const previousCount = e.target.getAttribute('data-previousval');
+    const currentCount = e.target.value;
+    const currentItem = JSON.parse(e.target.getAttribute('data-item'));
+
+    localStorage.pushArrayItem('basket', currentItem);
   }
 
   return (
@@ -19,8 +27,8 @@ function BasketPage() {
         return (
           <div key={index}>
             <h1>{item.title}</h1>
-            <select className='bg-gray-100 px-2 py-1 border border-gray-400'>
-              <option>{removeDuplicatesGetCount(appState.basket).count[item.id]}</option>
+            <select data-item={`${JSON.stringify(item)}`} data-previousval={`${removeDuplicatesGetCount(appState.basket).count[item.id]}`} onChange={handleChange} className='bg-gray-100 px-2 py-1 border border-gray-400'>
+              <option >{removeDuplicatesGetCount(appState.basket).count[item.id]}</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
