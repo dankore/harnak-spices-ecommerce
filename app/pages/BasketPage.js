@@ -43,24 +43,32 @@ function BasketPage() {
 
   function handleImageView(e) {
     const url = e.target.src;
-    const title = e.target.getAttribute('data-title')
-   
+    const title = e.target.getAttribute('data-title');
+
     setState((draft) => {
       draft.image = url;
       draft.title = title;
     });
 
     appDispatch({ type: 'toggleImageViewer' });
+  }
 
+  function calTotal() {
+    const basketTotal = removeDuplicatesGetCount(appState.basket).result.reduce((runningTotal, item) => {
+      const currTotal = item.price * removeDuplicatesGetCount(appState.basket).count[item.id];
+      return runningTotal + currTotal;
+    }, 0);
+
+    return basketTotal;
   }
 
   return (
     <Page title="Basket">
       <div className='max-w-6xl mx-auto lg:flex pt-12 pb-3'>
-        <div className=''>
+        <div className='border-r'>
           {removeDuplicatesGetCount(appState.basket).result.map((item, index) => {
             return (
-              <div className='flex mb-12' key={index}>
+              <div className='flex mb-12 border-b' key={index}>
 
                 {/* IMAGE */}
                 <div>
@@ -106,13 +114,13 @@ function BasketPage() {
                   {/* PRICE */}
                   <div className="lg:flex lg:justify-center">
                     <div>
-                      <span className="text-red-600 block">
+                      <span className="block">
                         <s className="text-sm text-gray-600 -mt-2 block">
-                         {Math.ceil(item.price + 69)}
+                          {Math.ceil(item.price + 69)}
                         </s>
-                        <span className="text-xl font-bold">{Math.ceil(item.price)} each</span>
+                        <span className="">{Math.ceil(item.price)} each</span>
                       </span>
-                      <span>{Math.ceil(item.price) * removeDuplicatesGetCount(appState.basket).count[item.id]}</span>
+                      <span className='font-bold'>{new Intl.NumberFormat().format(Math.ceil(item.price) * removeDuplicatesGetCount(appState.basket).count[item.id])}</span>
                     </div>
                   </div>
                 </div>
@@ -120,7 +128,13 @@ function BasketPage() {
             );
           })}
         </div>
-        <div style={{ minWidth: 400 + 'px' }} className='bg-green-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corr</div>
+        <div style={{ minWidth: 400 + 'px' }} className='px-5 mt-12'>
+          <div className='mb-5 flex justify-between'>
+            <p>Grand total</p>
+            <p>{new Intl.NumberFormat().format(Math.ceil(calTotal()))}</p>
+          </div>
+          <button className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out'>Order Now</button>
+        </div>
       </div>
     </Page>
   );
