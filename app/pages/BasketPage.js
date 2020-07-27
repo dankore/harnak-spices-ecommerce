@@ -76,7 +76,7 @@ function BasketPage() {
                   <ImageViewer image={state.image} title={state.title} />
                 )}
 
-                <div className='lg:flex lg:justify-between lg:items-center lg:w-full px-3'>
+                <div className='bg-red-400 lg:flex lg:justify-between lg:items-center lg:w-full px-3'>
                   {/* TITLE */}
                   <p className='lg:max-w-xs'>{item.title}</p>
 
