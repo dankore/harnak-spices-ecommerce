@@ -76,7 +76,7 @@ function BasketPage() {
                   <ImageViewer image={state.image} title={state.title} />
                 )}
 
-                <div className='bg-red-400 lg:flex lg:justify-between lg:items-center lg:w-full px-3'>
+                <div className='lg:flex lg:justify-between lg:items-center lg:w-full px-3'>
                   {/* TITLE */}
                   <p className='lg:max-w-xs'>{item.title}</p>
 
@@ -107,9 +107,12 @@ function BasketPage() {
                   <div className="lg:flex lg:justify-center">
                     <div>
                       <span className="text-red-600 block">
-                        <span className="text-sm">Sale</span>{' '}
-                        <span className="text-2xl font-bold">{item.price}</span>
+                        <s className="text-sm text-gray-600 -mt-2 block">
+                         {Math.ceil(item.price + 69)}
+                        </s>
+                        <span className="text-xl font-bold">{Math.ceil(item.price)} each</span>
                       </span>
+                      <span>{Math.ceil(item.price) * removeDuplicatesGetCount(appState.basket).count[item.id]}</span>
                     </div>
                   </div>
                 </div>
