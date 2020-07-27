@@ -44,20 +44,24 @@ function BasketPage() {
         <div className=''>
           {removeDuplicatesGetCount(appState.basket).result.map((item, index) => {
             return (
-              <div className='grid grid-cols-4 gap-3' key={index}>
+              <div className='flex mb-12' key={index}>
                 
                 {/* IMAGE */}
-                <img
-                  onClick={() => appDispatch({ type: 'toggleImageViewer' })}
-                  className="flex w-56 h-56 mb-2 cursor-pointer"
-                  src={item.image}
-                />
+                <div>
+                  <img
+                    onClick={() => appDispatch({ type: 'toggleImageViewer' })}
+                    className="flex w-56 h-56 mb-2 cursor-pointer"
+                    src={item.image}
+                  />
+                </div>
 
+                <div className='lg:flex lg:justify-between lg:items-center lg:w-full px-3'>
                 {/* TITLE */}
-                <p  className=''>{item.title}</p>
+                <p  className='lg:max-w-xs'>{item.title}</p>
 
+                
                 {/* SELECT */}
-                <div className='text-center'>
+                <div className='my-5 lg:my-0 lg:text-center'>
                   <select
                     data-item={`${JSON.stringify(item)}`}
                     data-previousval={`${removeDuplicatesGetCount(appState.basket).count[item.id]}`}
@@ -79,7 +83,7 @@ function BasketPage() {
                 </div>
 
                 {/* PRICE */}
-                <div className="flex justify-center">
+                <div className="lg:flex lg:justify-center">
                   <div>
                     <span className="text-red-600 block">
                       <span className="text-sm">Sale</span>{' '}
@@ -87,7 +91,7 @@ function BasketPage() {
                     </span>
                   </div>
                 </div>
-
+                </div>
               </div>
             );
           })}
