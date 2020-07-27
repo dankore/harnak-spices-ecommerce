@@ -22,24 +22,23 @@ function BasketPage() {
       addItemstoLocalStorage(currentItem, difference);
     }
     if (difference < 0) {
-      removeItemstoLocalStorage(currentItem, difference);
+      removeItemsFromLocalStorage(currentItem, difference);
     }
-
-
-    // // localStorage.deleteAnItem('basket', currentItem);
-
-
-    // localStorage.pushArrayItem('basket', currentItem);
   }
 
   function addItemstoLocalStorage(item, count) {
-    // while (count > 0) {
-    //   // localStorage.pushArrayItem('basket', currentItem);
-    //   console.log('hi');
+    while (count > 0) {
+      localStorage.pushArrayItem('basket', item);
+      count--;
+    }
+  }
 
-    count--;
-
-    // }
+  function removeItemsFromLocalStorage(item, count) {
+    count = Math.abs(count);
+    while (count > 0) {
+      localStorage.deleteItem('basket', item);
+      count--;
+    }
   }
 
   return (
@@ -51,6 +50,7 @@ function BasketPage() {
             <h1>{item.title}</h1>
             <select data-item={`${JSON.stringify(item)}`} data-previousval={`${removeDuplicatesGetCount(appState.basket).count[item.id]}`} onChange={handleChange} className='bg-gray-100 px-2 py-1 border border-gray-400'>
               <option >{removeDuplicatesGetCount(appState.basket).count[item.id]}</option>
+              <option>1</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
@@ -58,6 +58,8 @@ function BasketPage() {
               <option>6</option>
               <option>7</option>
               <option>8</option>
+              <option>9</option>
+              <option>10</option>
             </select>
           </div>
         );
