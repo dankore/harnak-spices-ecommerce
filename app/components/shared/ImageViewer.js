@@ -11,8 +11,8 @@ function ImageViewer({ image, title }) {
 }
 
 ImageViewer.propTypes = {
-  image: PropTypes.node.isRequired,
-  title: PropTypes.any,
+  image: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default ImageViewer;

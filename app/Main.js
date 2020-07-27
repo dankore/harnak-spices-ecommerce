@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { useImmerReducer } from 'use-immer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -12,6 +12,7 @@ import Header from './components/shared/Header';
 import Homepage from './pages/Homepage';
 import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 import SeoDefault from './components/shared/SeoDefault';
+import BasketPage from './pages/BasketPage';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 function Main() {
@@ -19,6 +20,8 @@ function Main() {
     toggleImageViewer: false,
     toggleProfileDropdown: false,
     toggleHamburgerMenu: false,
+    basket: [],
+    addToBasketCount: 0,
   };
 
   function appReducer(draft, action) {
@@ -37,11 +40,47 @@ function Main() {
         draft.toggleImageViewer = false;
         draft.toggleProfileDropdown = false;
         return;
+      case 'addItemToBasket':
+        draft.basket = action.value;
+        return;
+      case 'addToBasketCount':
+        draft.addToBasketCount++;
+        return;
     }
   }
 
   const [state, dispatch] = useImmerReducer(appReducer, initialState);
   console.log(`%c Hello, my name is...not important`, 'font-size: 2em; color: green');
+
+  useEffect(() => {
+    Storage.prototype.getArray = function (arrayName) {
+      var thisArray = [];
+      var fetchArrayObject = this.getItem(arrayName);
+      if (typeof fetchArrayObject !== 'undefined') {
+        if (fetchArrayObject !== null) {
+          thisArray = JSON.parse(fetchArrayObject);
+        }
+      }
+      return thisArray;
+    };
+
+    Storage.prototype.pushArrayItem = function (arrayName, arrayItem) {
+      var existingArray = this.getArray(arrayName);
+      existingArray.push(arrayItem);
+      this.setItem(arrayName, JSON.stringify(existingArray));
+    };
+
+    Storage.prototype.deleteItem = function (arrayName, arrayItem) {
+      var existingArray = this.getArray(arrayName);
+      var index = existingArray.findIndex((item) => item.id == arrayItem.id); // GET INDEX
+      existingArray.splice(index, 1); // REMOVED ITEM
+      this.setItem(arrayName, JSON.stringify(existingArray));
+    };
+  }, []);
+
+  useEffect(() => {
+    dispatch({ type: 'addItemToBasket', value: localStorage.getArray('basket') });
+  }, [state.addToBasketCount]);
 
   return (
     <StateContext.Provider value={state}>
@@ -56,6 +95,9 @@ function Main() {
               </Route>
               <Route path="/product/:id">
                 <ViewSingleProduct />
+              </Route>
+              <Route path="/basket">
+                <BasketPage />
               </Route>
             </Switch>
           </Suspense>

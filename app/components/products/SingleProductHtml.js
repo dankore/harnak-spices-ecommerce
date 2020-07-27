@@ -8,6 +8,11 @@ function SingleProductHtml({ singleProduct }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
+  function handleAddItem() {
+    appDispatch({ type: 'addToBasketCount' });
+    localStorage.pushArrayItem('basket', singleProduct);
+  }
+
   return (
     <div className="py-10">
       {/* IMAGE VIEWER */}
@@ -45,6 +50,12 @@ function SingleProductHtml({ singleProduct }) {
                 </span>
               </div>
             </div>
+            <button
+              onClick={handleAddItem}
+              className="bg-yellow-700 text-white w-full px-3 py-1 mt-5"
+            >
+              Add to Basket
+            </button>
           </div>
         </div>
       </div>

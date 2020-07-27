@@ -47,7 +47,6 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
             <Link to="/" className="flex-shrink-0">
-              {/* <span className="block lg:hidden">Menu</span> */}
               <img className="block lg:hidden h-12 w-auto" src={logo} alt="Harnak Spices logo" />
               <img className="hidden lg:block h-12 w-auto" src={logo} alt="Harnak Spices logo" />
             </Link>
@@ -77,14 +76,27 @@ function Navbar() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
+          <div className="text-sm absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
+            <div className="block lg:hidden relative">
+              <Link to="/basket" className="text-center">
+                <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
+                <span className="block text-red-600">{appState?.basket.length}</span>
+              </Link>
+            </div>
             {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative hidden lg:block">
-              <div>
+              <div className="flex items-center">
+                <Link to="/basket" className="flex items-center mr-3 relative">
+                  <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
+                  <span className="absolute text-red-600 ml-8 -mt-3">
+                    {appState?.basket.length}
+                  </span>
+                </Link>
                 <div className="flex items-center">
-                  <i className="text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
+                  <i className="text-3xl text-gray-700 mr-2 fas fa-globe-africa"></i>
                   <span> Suleja, Niger State</span>
                 </div>
+
                 {/* <button
                   className="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
                   id="user-menu"
@@ -95,6 +107,7 @@ function Navbar() {
                   <i className="far fa-user-circle text-3xl text-gray-700"></i>
                 </button> */}
               </div>
+
               {/* {appState?.toggleProfileDropdown && (
                 <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
                   <div
