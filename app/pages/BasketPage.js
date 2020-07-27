@@ -62,6 +62,20 @@ function BasketPage() {
     return basketTotal;
   }
 
+  function calTotalBeforeSavings() {
+    const basketTotal = removeDuplicatesGetCount(appState.basket).result.reduce((runningTotal, item) => {
+      const currTotal = (item.price + 69) * removeDuplicatesGetCount(appState.basket).count[item.id];
+      return runningTotal + currTotal;
+    }, 0);
+
+    return basketTotal;
+  }
+
+  const totalAfterSavings = calTotal();
+  const totalBeforeSavings = calTotalBeforeSavings();
+  const savings = totalBeforeSavings - totalAfterSavings;
+  const percentSavings = savings/totalBeforeSavings * 100
+
   return (
     <Page title="Basket">
       <div className='max-w-6xl mx-auto lg:flex pt-12 pb-3'>
@@ -131,9 +145,10 @@ function BasketPage() {
         <div style={{ minWidth: 400 + 'px' }} className='px-5 mt-12'>
           <div className='mb-5 flex justify-between'>
             <p>Grand total</p>
-            <p>{new Intl.NumberFormat().format(Math.ceil(calTotal()))}</p>
+            <p className='font-semibold'>{new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}</p>
           </div>
           <button className='w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out'>Order Now</button>
+          <p><span className='text-pink-700'>Congrats</span> you save <span className='text-pink-700'>{new Intl.NumberFormat().format(Math.ceil(savings))}</span> or <span className='text-pink-700'>{Math.floor(percentSavings)}%!</span> </p>
         </div>
       </div>
     </Page>
