@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
@@ -9,7 +9,7 @@ function SingleProductHtml({ singleProduct }) {
   const appState = useContext(StateContext);
 
   function handleAddItem() {
-    appDispatch({type: 'addToBasketCount'});
+    appDispatch({ type: 'addToBasketCount' });
     localStorage.pushArrayItem('basket', singleProduct);
   }
 

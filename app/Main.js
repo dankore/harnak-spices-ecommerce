@@ -49,7 +49,6 @@ function Main() {
     }
   }
 
-
   const [state, dispatch] = useImmerReducer(appReducer, initialState);
   console.log(`%c Hello, my name is...not important`, 'font-size: 2em; color: green');
 
@@ -58,7 +57,9 @@ function Main() {
       var thisArray = [];
       var fetchArrayObject = this.getItem(arrayName);
       if (typeof fetchArrayObject !== 'undefined') {
-        if (fetchArrayObject !== null) { thisArray = JSON.parse(fetchArrayObject); }
+        if (fetchArrayObject !== null) {
+          thisArray = JSON.parse(fetchArrayObject);
+        }
       }
       return thisArray;
     };
@@ -97,7 +98,7 @@ function Main() {
 
     Storage.prototype.deleteItem = function (arrayName, arrayItem) {
       var existingArray = this.getArray(arrayName);
-      var index = existingArray.findIndex(item => item.id == arrayItem.id); // GET INDEX
+      var index = existingArray.findIndex((item) => item.id == arrayItem.id); // GET INDEX
       existingArray.splice(index, 1); // REMOVED ITEM
       this.setItem(arrayName, JSON.stringify(existingArray));
     };
@@ -105,7 +106,6 @@ function Main() {
     Storage.prototype.deleteArray = function (arrayName) {
       this.removeItem(arrayName);
     };
-
 
     // .pushArrayItem(arrayName, arrayItem); -> adds an element onto end of named array
     //   .unshiftArrayItem(arrayName, arrayItem); -> adds an element onto front of named array
@@ -118,8 +118,6 @@ function Main() {
   useEffect(() => {
     dispatch({ type: 'addItemToBasket', value: localStorage.getArray('basket') });
   }, [state.addToBasketCount]);
-
-
 
   return (
     <StateContext.Provider value={state}>

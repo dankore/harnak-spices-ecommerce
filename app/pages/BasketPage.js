@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import Page from '../components/shared/Page';
 import StateContext from '../contextsProviders/StateContext';
 import { removeDuplicatesGetCount } from '../helpers/JSHelpers';
-import { useImmer } from 'use-immer';
 import DispatchContext from '../contextsProviders/DispatchContext';
-
 
 function BasketPage() {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
-  const [state, seState] = useImmer({});
 
   function handleChange(e) {
     appDispatch({ type: 'addToBasketCount' });
@@ -42,14 +39,19 @@ function BasketPage() {
   }
 
   return (
-    <Page title='Basket'>
+    <Page title="Basket">
       <h1>Your Basket</h1>
       {removeDuplicatesGetCount(appState.basket).result.map((item, index) => {
         return (
           <div key={index}>
             <h1>{item.title}</h1>
-            <select data-item={`${JSON.stringify(item)}`} data-previousval={`${removeDuplicatesGetCount(appState.basket).count[item.id]}`} onChange={handleChange} className='bg-gray-100 px-2 py-1 border border-gray-400'>
-              <option >{removeDuplicatesGetCount(appState.basket).count[item.id]}</option>
+            <select
+              data-item={`${JSON.stringify(item)}`}
+              data-previousval={`${removeDuplicatesGetCount(appState.basket).count[item.id]}`}
+              onChange={handleChange}
+              className="bg-gray-100 px-2 py-1 border border-gray-400"
+            >
+              <option>{removeDuplicatesGetCount(appState.basket).count[item.id]}</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
