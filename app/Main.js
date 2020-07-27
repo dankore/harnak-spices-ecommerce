@@ -70,49 +70,12 @@ function Main() {
       this.setItem(arrayName, JSON.stringify(existingArray));
     };
 
-    Storage.prototype.popArrayItem = function (arrayName) {
-      var arrayItem = {};
-      var existingArray = this.getArray(arrayName);
-      if (existingArray.length > 0) {
-        arrayItem = existingArray.pop();
-        this.setItem(arrayName, JSON.stringify(existingArray));
-      }
-      return arrayItem;
-    };
-
-    Storage.prototype.shiftArrayItem = function (arrayName) {
-      var arrayItem = {};
-      var existingArray = this.getArray(arrayName);
-      if (existingArray.length > 0) {
-        arrayItem = existingArray.shift();
-        this.setItem(arrayName, JSON.stringify(existingArray));
-      }
-      return arrayItem;
-    };
-
-    Storage.prototype.unshiftArrayItem = function (arrayName, arrayItem) {
-      var existingArray = this.getArray(arrayName);
-      existingArray.unshift(arrayItem);
-      this.setItem(arrayName, JSON.stringify(existingArray));
-    };
-
     Storage.prototype.deleteItem = function (arrayName, arrayItem) {
       var existingArray = this.getArray(arrayName);
       var index = existingArray.findIndex((item) => item.id == arrayItem.id); // GET INDEX
       existingArray.splice(index, 1); // REMOVED ITEM
       this.setItem(arrayName, JSON.stringify(existingArray));
     };
-
-    Storage.prototype.deleteArray = function (arrayName) {
-      this.removeItem(arrayName);
-    };
-
-    // .pushArrayItem(arrayName, arrayItem); -> adds an element onto end of named array
-    //   .unshiftArrayItem(arrayName, arrayItem); -> adds an element onto front of named array
-    //     .popArrayItem(arrayName); -> removes & returns last array element
-    //       .shiftArrayItem(arrayName); -> removes & returns first array element
-    //         .getArray(arrayName); -> returns entire array
-    //           .deleteArray(arrayName); -> removes entire array from storage
   }, []);
 
   useEffect(() => {

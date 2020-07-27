@@ -102,7 +102,7 @@ function BasketPage() {
           {basketItemsUnique.length > 0 ? (
             basketItemsUnique.map((item, index) => {
               return (
-                <div className="relative flex mb-12 border-b" key={index}>
+                <div className="relative flex mb-12 border-b border-r" key={index}>
                   {/* IMAGE */}
                   <div>
                     <img
