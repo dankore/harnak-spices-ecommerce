@@ -16,12 +16,34 @@ function BasketPage() {
     const previousCount = e.target.getAttribute('data-previousval');
     const currentCount = e.target.value;
     const currentItem = JSON.parse(e.target.getAttribute('data-item'));
+    const difference = currentCount - previousCount;
 
-    localStorage.pushArrayItem('basket', currentItem);
+    if (difference > 0) {
+      addItemstoLocalStorage(currentItem, difference);
+    }
+    if (difference < 0) {
+      removeItemstoLocalStorage(currentItem, difference);
+    }
+
+
+    // // localStorage.deleteAnItem('basket', currentItem);
+
+
+    // localStorage.pushArrayItem('basket', currentItem);
+  }
+
+  function addItemstoLocalStorage(item, count) {
+    // while (count > 0) {
+    //   // localStorage.pushArrayItem('basket', currentItem);
+    //   console.log('hi');
+
+    count--;
+
+    // }
   }
 
   return (
-    <Page>
+    <Page title='Basket'>
       <h1>Your Basket</h1>
       {removeDuplicatesGetCount(appState.basket).result.map((item, index) => {
         return (
