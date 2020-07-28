@@ -7,7 +7,7 @@ import { data } from '../data';
 function ViewSingleProduct() {
   const { id } = useParams();
   let singleProduct = {
-    feed: data[id],
+    feed: data[id - 1],
   };
 
   const descriptionSEO = `SALE ${(singleProduct.feed.price + 69).toFixed(2)}! Price before sale: ${
