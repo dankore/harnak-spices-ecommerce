@@ -88,7 +88,7 @@ function Navbar() {
               <div className="flex items-center">
                 <Link to="/basket" className="flex items-center mr-3 relative">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
-                  <span className="absolute text-red-600 ml-8 -mt-3">
+                  <span className="absolute text-red-600 ml-8 -mt-6">
                     {appState?.basket.length}
                   </span>
                 </Link>
@@ -96,7 +96,8 @@ function Navbar() {
                   <i className="text-3xl text-gray-700 mr-2 fas fa-globe-africa"></i>
                   <span> Suleja, Niger State</span>
                 </div>
-
+                <input type="hidden" className="bg-red-500 bg-red-600 bg-red-400" />
+                {/* /** FOR DEVELOPER USER */}
                 {/* <button
                   className="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
                   id="user-menu"

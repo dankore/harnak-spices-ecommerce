@@ -177,16 +177,18 @@ function BasketPage() {
             )}
           </div>
           {basketItemsUnique.length > 0 && (
-            <div className="px-5">
+            <div className="px-5 w-full">
               <div className="mb-5 flex justify-between">
                 <p>Grand total</p>
                 <p className="font-semibold">
                   {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
                 </p>
               </div>
-              <button className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                Order Now
-              </button>
+              <div className="w-full flex justify-end">
+                <button className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                  Order Now
+                </button>
+              </div>
               <p>
                 <span className="text-pink-700">Congrats</span> — you saved{' '}
                 <span className="text-pink-700">

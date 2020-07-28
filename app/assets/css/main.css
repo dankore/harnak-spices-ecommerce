@@ -438,10 +438,28 @@ img {
   background-color: rgba(237, 242, 247, var(--bg-opacity));
 }
 
-.bg-yellow-700 {
+.bg-red-400 {
   --bg-opacity: 1;
-  background-color: #b7791f;
-  background-color: rgba(183, 121, 31, var(--bg-opacity));
+  background-color: #fc8181;
+  background-color: rgba(252, 129, 129, var(--bg-opacity));
+}
+
+.bg-red-500 {
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity));
+}
+
+.bg-red-600 {
+  --bg-opacity: 1;
+  background-color: #e53e3e;
+  background-color: rgba(229, 62, 62, var(--bg-opacity));
+}
+
+.bg-green-600 {
+  --bg-opacity: 1;
+  background-color: #38a169;
+  background-color: rgba(56, 161, 105, var(--bg-opacity));
 }
 
 .bg-blue-600 {
@@ -454,6 +472,12 @@ img {
   --bg-opacity: 1;
   background-color: #f7fafc;
   background-color: rgba(247, 250, 252, var(--bg-opacity));
+}
+
+.hover\:bg-green-800:hover {
+  --bg-opacity: 1;
+  background-color: #276749;
+  background-color: rgba(39, 103, 73, var(--bg-opacity));
 }
 
 .hover\:bg-blue-800:hover {
@@ -544,6 +568,10 @@ img {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -715,6 +743,10 @@ img {
   margin-top: -0.75rem;
 }
 
+.-mt-6 {
+  margin-top: -1.5rem;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -840,6 +872,12 @@ img {
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.text-gray-200 {
+  --text-opacity: 1;
+  color: #edf2f7;
+  color: rgba(237, 242, 247, var(--text-opacity));
 }
 
 .text-gray-500 {
