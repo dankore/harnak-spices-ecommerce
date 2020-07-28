@@ -186,8 +186,8 @@ function BasketPage() {
               </div>
               <div className="w-full flex justify-end">
                 <button className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                Order Now
-              </button>
+                  Order Now
+                </button>
               </div>
               <p>
                 <span className="text-pink-700">Congrats</span> — you saved{' '}

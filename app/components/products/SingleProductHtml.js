@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
@@ -8,10 +8,17 @@ function SingleProductHtml({ singleProduct }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
+  const [count, setCount] = useState(0);
+
   function handleAddItem() {
     appDispatch({ type: 'addToBasketCount' });
     localStorage.pushArrayItem('basket', singleProduct);
+    setCount(localStorage.getArray('basket').length - localStorage.getItem('initialBasketCount'));
   }
+
+  useEffect(() => {
+    localStorage.setItem('initialBasketCount', appState.basket.length);
+  }, [window.location]);
 
   return (
     <div className="py-10">
@@ -50,12 +57,16 @@ function SingleProductHtml({ singleProduct }) {
                 </span>
               </div>
             </div>
-            <button
-              onClick={handleAddItem}
-              className="bg-yellow-700 text-white w-full px-3 py-1 mt-5"
-            >
-              Add to Basket
-            </button>
+            <div>
+              <button
+                onClick={handleAddItem}
+                className="inline-flex items-center justify-center px-4 mt-5 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              >
+                <i className="text-gray-200 mr-2 fas fa-shopping-basket"></i>
+                Add to Basket
+                <span className="ml-2">{count > 0 ? count : ''}</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
