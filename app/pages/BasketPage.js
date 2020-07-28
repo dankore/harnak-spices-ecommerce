@@ -103,13 +103,13 @@ function BasketPage() {
             {basketItemsUnique.length > 0 ? (
               basketItemsUnique.map((item, index) => {
                 return (
-                  <div className="relative flex mb-12 border-b border-r" key={index}>
+                  <div className="relative mb-12 border" key={index}>
                     {/* IMAGE */}
-                    <div>
+                    <div className="w-full">
                       <img
                         onClick={handleImageView}
                         data-title={`${item.title}`}
-                        className="flex w-56 h-56 mb-2 cursor-pointer"
+                        className="object-cover h-56 w-full mb-2 cursor-pointer"
                         src={item.image}
                       />
                     </div>
@@ -118,12 +118,12 @@ function BasketPage() {
                       <ImageViewer image={state.image} title={state.title} />
                     )}
 
-                    <div className="lg:grid lg:grid-cols-3 px-3 w-full">
-                      {/* TITLE */}
-                      <p className="">{item.title}</p>
+                    {/* TITLE */}
+                    <p className="pl-2">{item.title}</p>
 
+                    <div className="flex justify-between items-center mt-3">
                       {/* SELECT */}
-                      <div className="my-8 lg:my-0 lg:text-center">
+                      <div>
                         <select
                           data-item={`${JSON.stringify(item)}`}
                           data-previousval={`${basketItemIds[item.id]}`}
@@ -145,30 +145,25 @@ function BasketPage() {
                       </div>
 
                       {/* PRICE */}
-                      <div className="lg:flex lg:justify-center">
-                        <div>
-                          <span className="block">
-                            <s className="text-sm text-gray-600 -mt-2 block">
-                              {Math.ceil(item.price + 69)}
-                            </s>
-                            <span className="">{Math.ceil(item.price)} each</span>
-                          </span>
-                          <span className="font-bold">
-                            {new Intl.NumberFormat().format(
-                              Math.ceil(item.price) * basketItemIds[item.id]
-                            )}
-                          </span>
-                        </div>
+                      <div className="flex items-center">
+                        <s className="text-sm text-gray-600 block">{Math.ceil(item.price + 69)}</s>
+                        <span className="block mx-3">{Math.ceil(item.price)} each</span>
+                        <span className="font-bold block">
+                          {new Intl.NumberFormat().format(
+                            Math.ceil(item.price) * basketItemIds[item.id]
+                          )}
+                        </span>
                       </div>
+
+                      <button
+                        onClick={handleRemoveItem}
+                        data-item={`${JSON.stringify(item)}`}
+                        data-previousval={`${basketItemIds[item.id]}`}
+                        className="border px-2 py-1 hover:bg-gray-200"
+                      >
+                        Remove
+                      </button>
                     </div>
-                    <button
-                      onClick={handleRemoveItem}
-                      data-item={`${JSON.stringify(item)}`}
-                      data-previousval={`${basketItemIds[item.id]}`}
-                      className="absolute bottom-0 right-0 underline px-3 m-2"
-                    >
-                      Remove
-                    </button>
                   </div>
                 );
               })
@@ -177,25 +172,27 @@ function BasketPage() {
             )}
           </div>
           {basketItemsUnique.length > 0 && (
-            <div className="px-5 w-full">
-              <div className="mb-5 flex justify-between">
-                <p>Grand total</p>
-                <p className="font-semibold">
-                  {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+            <div style={{ minWidth: 400 + 'px' }} className="w-full">
+              <div className='border p-5'>
+                <div className="mb-5 flex justify-between">
+                  <p>Grand total</p>
+                  <p className="font-semibold">
+                    {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+                  </p>
+                </div>
+                <div className="w-full flex justify-end">
+                  <button className="inline-flex w-full items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                    Order Now
+                  </button>
+                </div>
+                <p>
+                  <span className="text-pink-700">Congrats</span> — you saved{' '}
+                  <span className="text-pink-700">
+                    {new Intl.NumberFormat().format(Math.ceil(savings))}
+                  </span>{' '}
+                  or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
                 </p>
               </div>
-              <div className="w-full flex justify-end">
-                <button className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                  Order Now
-                </button>
-              </div>
-              <p>
-                <span className="text-pink-700">Congrats</span> — you saved{' '}
-                <span className="text-pink-700">
-                  {new Intl.NumberFormat().format(Math.ceil(savings))}
-                </span>{' '}
-                or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
-              </p>
             </div>
           )}
         </div>
