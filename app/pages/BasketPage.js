@@ -98,80 +98,79 @@ function BasketPage() {
   return (
     <Page title="Basket">
       <div className="w-full pt-12 pb-3">
-        <div className="max-w-5xl mx-auto lg:flex">
-          <div>
-            {basketItemsUnique.length > 0 ? (
-              basketItemsUnique.map((item, index) => {
-                return (
-                  <div className="relative mb-12 border" key={index}>
-                    {/* IMAGE */}
-                    <div className="w-full">
-                      <img
-                        onClick={handleImageView}
-                        data-title={`${item.title}`}
-                        className="object-cover h-56 w-full mb-2 cursor-pointer"
-                        src={item.image}
-                      />
-                    </div>
-                    {/* IMAGE VIEWER */}
-                    {appState.toggleImageViewer && (
-                      <ImageViewer image={state.image} title={state.title} />
-                    )}
+        {basketItemsUnique.length > 0 ? (
+          <div className="max-w-5xl mx-auto lg:flex">
+            <div>
+              {basketItemsUnique.length > 0 &&
+                basketItemsUnique.map((item, index) => {
+                  return (
+                    <div className="relative mb-12 border" key={index}>
+                      {/* IMAGE */}
+                      <div className="w-full">
+                        <img
+                          onClick={handleImageView}
+                          data-title={`${item.title}`}
+                          className="object-cover h-56 w-full mb-2 cursor-pointer"
+                          src={item.image}
+                        />
+                      </div>
+                      {/* IMAGE VIEWER */}
+                      {appState.toggleImageViewer && (
+                        <ImageViewer image={state.image} title={state.title} />
+                      )}
 
-                    {/* TITLE */}
-                    <p className="pl-2">{item.title}</p>
+                      {/* TITLE */}
+                      <p className="pl-2">{item.title}</p>
 
-                    <div className="flex justify-between items-center mt-3">
-                      {/* SELECT */}
-                      <div>
-                        <select
+                      <div className="flex justify-between items-center mt-3">
+                        {/* SELECT */}
+                        <div>
+                          <select
+                            data-item={`${JSON.stringify(item)}`}
+                            data-previousval={`${basketItemIds[item.id]}`}
+                            onChange={handleChange}
+                            className="flex-none bg-gray-100 px-2 py-1 border border-gray-400"
+                          >
+                            <option>{basketItemIds[item.id]}</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+                        </div>
+
+                        {/* PRICE */}
+                        <div className="flex items-center">
+                          <s className="text-sm text-gray-600 block">
+                            {Math.ceil(item.price + 69)}
+                          </s>
+                          <span className="block mx-3">{Math.ceil(item.price)} each</span>
+                          <span className="font-bold block">
+                            {new Intl.NumberFormat().format(
+                              Math.ceil(item.price) * basketItemIds[item.id]
+                            )}
+                          </span>
+                        </div>
+
+                        <button
+                          onClick={handleRemoveItem}
                           data-item={`${JSON.stringify(item)}`}
                           data-previousval={`${basketItemIds[item.id]}`}
-                          onChange={handleChange}
-                          className="flex-none bg-gray-100 px-2 py-1 border border-gray-400"
+                          className="border px-2 py-1 hover:bg-gray-200"
                         >
-                          <option>{basketItemIds[item.id]}</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                          <option>6</option>
-                          <option>7</option>
-                          <option>8</option>
-                          <option>9</option>
-                          <option>10</option>
-                        </select>
+                          Remove
+                        </button>
                       </div>
-
-                      {/* PRICE */}
-                      <div className="flex items-center">
-                        <s className="text-sm text-gray-600 block">{Math.ceil(item.price + 69)}</s>
-                        <span className="block mx-3">{Math.ceil(item.price)} each</span>
-                        <span className="font-bold block">
-                          {new Intl.NumberFormat().format(
-                            Math.ceil(item.price) * basketItemIds[item.id]
-                          )}
-                        </span>
-                      </div>
-
-                      <button
-                        onClick={handleRemoveItem}
-                        data-item={`${JSON.stringify(item)}`}
-                        data-previousval={`${basketItemIds[item.id]}`}
-                        className="border px-2 py-1 hover:bg-gray-200"
-                      >
-                        Remove
-                      </button>
                     </div>
-                  </div>
-                );
-              })
-            ) : (
-              <div>Your basket is empty</div>
-            )}
-          </div>
-          {basketItemsUnique.length > 0 && (
+                  );
+                })}
+            </div>
             <div style={{ minWidth: 400 + 'px' }} className="w-full">
               <div className="border-t border-r border-b border-l lg:border-l-0 p-5">
                 <div className="mb-5 flex justify-between">
@@ -194,8 +193,10 @@ function BasketPage() {
                 </p>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="text-2xl text-center">Empty basket</div>
+        )}
       </div>
     </Page>
   );

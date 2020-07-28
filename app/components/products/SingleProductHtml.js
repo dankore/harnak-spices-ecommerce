@@ -26,22 +26,19 @@ function SingleProductHtml({ singleProduct }) {
       {appState.toggleImageViewer && (
         <ImageViewer image={singleProduct.image} title={singleProduct.title} />
       )}
-      <div>
-        <h1 className="py-10 text-2xl text-center">
-          {/* TITLE */}
-          {singleProduct.title}
-        </h1>
-      </div>
+
+      <h1 className="mb-5 text-2xl text-center">
+        {/* TITLE */}
+        {singleProduct.title}
+      </h1>
 
       {/* SINGLE PRODUCT HTML */}
-      <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-lg mx-auto sm:border sm:border-gray-200 p-4">
-        <div className="flex justify-center">
-          <img
-            onClick={() => appDispatch({ type: 'toggleImageViewer' })}
-            className="flex w-56 h-56 mb-2 cursor-pointer"
-            src={singleProduct.image}
-          />
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto lg:border lg:border-gray-200">
+        <img
+          onClick={() => appDispatch({ type: 'toggleImageViewer' })}
+          className="object-cover h-64 w-full cursor-pointer"
+          src={singleProduct.image}
+        />
 
         <div className="flex justify-center items-center">
           <div>
