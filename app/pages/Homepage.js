@@ -1,44 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Page from '../components/shared/Page';
-import Axios from 'axios';
-import { useImmer } from 'use-immer';
 import Products from '../components/products/Products';
-import LoadingDotsAnimation from '../components/shared/LoadingDotsAnimation';
+import { data } from '../data';
 
 function Homepage() {
-  const [products, setProducts] = useImmer({
-    isLoading: false,
-    feed: [],
-  });
   const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594491219/free-background-press-v2_pg66nf.svg`;
   const description = `Find the best African spices online.`;
   const title = `Shop online for your spices | Harnak Spices`;
-
-  useEffect(() => {
-    const request = Axios.CancelToken.source();
-    try {
-      setProducts((draft) => {
-        draft.isLoading = true;
-      });
-      (async function getProducts() {
-        const response = await Axios.get('https://fakestoreapi.com/products?limit=5', {
-          cancelToken: request.token,
-        });
-
-        setProducts((draft) => {
-          draft.isLoading = false;
-          draft.feed = response.data;
-        });
-      })();
-    } catch (error) {
-      console.log(error.message);
-    }
-    return () => request.cancel();
-  }, []);
-
-  if (products.isLoading) {
-    return <LoadingDotsAnimation />;
-  }
 
   return (
     <Page title={title} image={image} description={description}>
@@ -50,7 +18,7 @@ function Homepage() {
         /> */}
       </div>
       <h1 className="py-10 text-center">Welcome to Harnak Spices Online Store</h1>
-      <Products products={products.feed} />
+      <Products products={data} />
     </Page>
   );
 }
