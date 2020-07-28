@@ -104,7 +104,7 @@ function BasketPage() {
               {basketItemsUnique.length > 0 &&
                 basketItemsUnique.map((item, index) => {
                   return (
-                    <div className="relative mb-12 border" key={index}>
+                    <div className="relative mb-12 border custom-shadow" key={index}>
                       {/* IMAGE */}
                       <div className="w-full">
                         <img
@@ -112,6 +112,7 @@ function BasketPage() {
                           data-title={`${item.title}`}
                           className="object-cover h-56 w-full mb-2 cursor-pointer"
                           src={item.image}
+                          alt="product"
                         />
                       </div>
                       {/* IMAGE VIEWER */}
@@ -172,7 +173,7 @@ function BasketPage() {
                 })}
             </div>
             <div style={{ minWidth: 400 + 'px' }} className="w-full">
-              <div className="border-t border-r border-b border-l lg:border-l-0 p-5">
+              <div className="custom-shadow p-5">
                 <div className="mb-5 flex justify-between">
                   <p>Grand total</p>
                   <p className="font-semibold">

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function ImageViewer({ image, title }) {
   return (
     <div className="modal shadow-lg absolute bg-white">
-      <img src={image} alt="productImage" />
+      <img src={image} alt="product" />
       {title}
     </div>
   );

@@ -34,7 +34,7 @@ function html(x) {
         integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous">
       </script>
     </head>
-    <body style="background-color: #f0f2f5; -webkit-font-smoothing: antialiased;">
+    <body style="background-color: #f8f9fa;; -webkit-font-smoothing: antialiased;">
       <div id="app">
       ${x}
       </div>

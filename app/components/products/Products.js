@@ -9,8 +9,16 @@ function Products({ products }) {
         <div className="bg-white grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:px-3">
           {products.map((product) => {
             return (
-              <Link to={`/product/${product.id}`} className="border mb-5 lg:mb-0" key={product.id}>
-                <img className="object-cover h-64 w-full cursor-pointer" src={product.image} />
+              <Link
+                to={`/product/${product.id}`}
+                className="border mb-5 lg:mb-0 custom-shadow"
+                key={product.id}
+              >
+                <img
+                  className="object-cover h-64 w-full cursor-pointer"
+                  src={product.image}
+                  alt="product"
+                />
 
                 <div className="flex items-center justify-between px-2">
                   {/* TITLE */}
