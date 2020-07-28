@@ -88,8 +88,8 @@ function Navbar() {
               <div className="flex items-center">
                 <Link to="/basket" className="flex items-center mr-3 relative">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
-                  <span className="absolute text-red-600 ml-8 -mt-6">
-                    {appState?.basket.length}
+                  <span className="absolute text-red-600 ml-8 -mt-5">
+                    {appState?.basket.length > 0 ? appState?.basket.length : ''}
                   </span>
                 </Link>
                 <div className="flex items-center">

@@ -173,7 +173,7 @@ function BasketPage() {
           </div>
           {basketItemsUnique.length > 0 && (
             <div style={{ minWidth: 400 + 'px' }} className="w-full">
-              <div className='border p-5'>
+              <div className="border-t border-r border-b border-l lg:border-l-0 p-5">
                 <div className="mb-5 flex justify-between">
                   <p>Grand total</p>
                   <p className="font-semibold">

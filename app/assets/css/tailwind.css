@@ -7,16 +7,6 @@
 
 /* NON-TAILWIND CSS
    ========================================================================== */
-/* GRID */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 70% 30em;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". .";
-}
-
 /* LOADING DOTS*/
 .dots-loading {
   margin: 0 auto;
