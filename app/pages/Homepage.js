@@ -11,7 +11,9 @@ function Homepage() {
   return (
     <Page title={title} image={image} description={description}>
       <div className="py-5">
-        <h1 className="py-6 font-semibold text-2xl text-center">Welcome to Harnak Spices Online Store</h1>
+        <h1 className="py-6 font-semibold text-2xl text-center">
+          Welcome to Harnak Spices Online Store
+        </h1>
         <Products products={data} />
       </div>
     </Page>
