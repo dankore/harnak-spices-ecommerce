@@ -97,6 +97,8 @@ function Navbar() {
                   <span> Suleja, Niger State</span>
                 </div>
 
+                <input type='hidden' className='bg-red-500 bg-red-600 bg-red-400' />
+
                 {/* <button
                   className="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
                   id="user-menu"
