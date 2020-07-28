@@ -10,15 +10,10 @@ function Homepage() {
 
   return (
     <Page title={title} image={image} description={description}>
-      <div className="max-w-lg mx-auto">
-        {/* <input
-          className="w-full pl-2 py-1 border border-gray-600 bg-gray-200"
-          type="text"
-          placeholder="Search Harnak Online Store..."
-        /> */}
+      <div className="py-5">
+        <h1 className="py-6 font-semibold text-2xl text-center">Welcome to Harnak Spices Online Store</h1>
+        <Products products={data} />
       </div>
-      <h1 className="py-10 text-center">Welcome to Harnak Spices Online Store</h1>
-      <Products products={data} />
     </Page>
   );
 }
