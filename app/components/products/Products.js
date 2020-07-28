@@ -6,7 +6,10 @@ function Products({ products }) {
   return (
     <>
       {products.length > 0 ? (
-        <div className="bg-white grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:px-3">
+        <div
+          style={{ background: '#f8f9fa' }}
+          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:px-3 py-10"
+        >
           {products.map((product) => {
             return (
               <Link
