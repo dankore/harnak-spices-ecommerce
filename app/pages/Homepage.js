@@ -10,8 +10,8 @@ function Homepage() {
 
   return (
     <Page title={title} image={image} description={description}>
-      <div className="py-5">
-        <h1 className="py-6 text-center">Harnak Spices</h1>
+      <div className="py-5 max-w-6xl mx-auto">
+        <h1 className="py-2 text-center">Harnak Spices</h1>
         <Products products={data} />
       </div>
     </Page>

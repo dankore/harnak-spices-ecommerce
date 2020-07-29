@@ -178,7 +178,7 @@ function BasketPage() {
                   );
                 })}
             </div>
-            <div style={{ minWidth: 400 + 'px' }} className="w-full mt-px">
+            <div style={{ minWidth: 400 + 'px' }} className="w-full lg:mt-px">
               <div className="custom-shadow p-5">
                 <div className="mb-5 flex justify-between">
                   <p>Grand total</p>

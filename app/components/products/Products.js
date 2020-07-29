@@ -8,7 +8,7 @@ function Products({ products }) {
       {products.length > 0 ? (
         <div
           style={{ background: '#f8f9fa' }}
-          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 py-10"
+          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:p-10"
         >
           {products.map((product) => {
             return (
