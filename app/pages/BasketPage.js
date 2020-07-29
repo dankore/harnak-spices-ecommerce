@@ -100,7 +100,7 @@ function BasketPage() {
       <div className="w-full pt-12">
         {basketItemsUnique.length > 0 ? (
           <>
-            <h2 className="max-w-5xl mx-auto pl-2">
+            <h2 className="max-w-5xl text-xl mx-auto pl-2">
               Your cart has{' '}
               {appState.basket.length > 1
                 ? appState.basket.length + ' items'
