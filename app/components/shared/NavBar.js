@@ -151,27 +151,33 @@ function Navbar() {
 
       {appState?.toggleHamburgerMenu && (
         <div style={{ zIndex: 2 }} className="block lg:hidden absolute bg-white inset-x-0 h-screen">
-          <div className="px-2 pt-2 pb-3">
-            <div className="mb-5 flex items-center">
+          <div className="pt-2 pb-3">
+            <div className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200 cursor-pointer">
               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
             </div>
             <a
               href="https://www.facebook.com/messages/t/harnaks"
-              className="mb-5 flex items-center"
+              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
             >
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
             </a>
-            <a href="mailto:harnakspices@gmail.com" className="mb-5 flex items-center">
+            <a
+              href="mailto:harnakspices@gmail.com"
+              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+            >
               <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
               <span>Order by Email: harnakspices@gmail.com</span>
             </a>
-            <a href="tel:+2348034042781" className="mb-5 flex items-center">
+            <a
+              href="tel:+2348034042781"
+              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+            >
               <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
             </a>
-            <div className="mb-5 flex items-center">
+            <div className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200 cursor-pointer">
               <i className="text-4xl lg:text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
               <span> Suleja, Niger State</span>
             </div>

@@ -98,7 +98,7 @@ function BasketPage() {
   return (
     <Page title="Basket">
       <div className="w-full pt-12 pb-3">
-        <h2 className="mb-5 max-w-5xl mx-auto">
+        <h2 className="mb-5 max-w-5xl mx-auto pl-2">
           Your cart has{' '}
           {appState.basket.length > 1
             ? appState.basket.length + ' items'
@@ -199,7 +199,7 @@ function BasketPage() {
                   );
                 })}
             </div>
-            <div style={{ minWidth: 400 + 'px' }} className="w-full lg:mt-px">
+            <div style={{ minWidth: 400 + 'px' }} className="w-full lg:ml-2 lg:mt-px">
               <div>
                 <div className="custom-shadow p-5 lg:block hidden">
                   <div className="mb-5 flex justify-between">
@@ -220,23 +220,29 @@ function BasketPage() {
                   <h2 className="px-3 py-1 bg-blue-600 text-white text-2xl text-center">
                     Order Now
                   </h2>
-                  <div className="p-4">
-                    <div className="mb-5 flex items-center">
+                  <div>
+                    <div className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200 cursor-pointer">
                       <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                       <span>Order on WhatsApp</span>
                     </div>
                     <a
                       href="https://www.facebook.com/messages/t/harnaks"
-                      className="mb-5 flex items-center"
+                      className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
                     >
                       <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                       <span>Order on Facebook</span>
                     </a>
-                    <a href="mailto:harnakspices@gmail.com" className="mb-5 flex items-center">
+                    <a
+                      href="mailto:harnakspices@gmail.com"
+                      className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+                    >
                       <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
                       <span>Order by Email: harnakspices@gmail.com</span>
                     </a>
-                    <a href="tel:+2348034042781" className="mb-5 flex items-center">
+                    <a
+                      href="tel:+2348034042781"
+                      className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+                    >
                       <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
                       <span>Order by Call: +234(0)803 404 2781</span>
                     </a>
