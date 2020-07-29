@@ -222,10 +222,13 @@ function BasketPage() {
                       Order Now
                     </h2>
                     <div>
-                      <div className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200 cursor-pointer">
+                      <a
+                        href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+                        className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                      >
                         <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                         <span>Order on WhatsApp</span>
-                      </div>
+                      </a>
                       <a
                         href="https://www.facebook.com/messages/t/harnaks"
                         className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"

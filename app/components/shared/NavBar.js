@@ -54,10 +54,13 @@ function Navbar() {
             <div className="hidden my-auto lg:block lg:mx-auto text-sm">
               <div className="flex items-center">
                 <p className="text-red-700 font-bold italic">Order Now:</p>
-                <div className="mx-3 flex items-center">
+                <a
+                   href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+                  className="mx-3 flex items-center"
+                >
                   <i className="text-3xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                   <span>WhatsApp</span>
-                </div>
+                </a>
                 <a
                   href="https://www.facebook.com/messages/t/harnaks"
                   className="mr-3 flex items-center"
@@ -152,10 +155,13 @@ function Navbar() {
       {appState?.toggleHamburgerMenu && (
         <div style={{ zIndex: 2 }} className="block lg:hidden absolute bg-white inset-x-0 h-screen">
           <div className="pt-2 pb-3">
-            <div className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200 cursor-pointer">
-              <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
+            <a
+               href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+            >
+               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
-            </div>
+            </a>
             <a
               href="https://www.facebook.com/messages/t/harnaks"
               className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
