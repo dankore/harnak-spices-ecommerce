@@ -123,14 +123,15 @@ function BasketPage() {
                       {/* TITLE */}
                       <p className="text-xl text-gray-800 semi-bold pl-2">{item.title}</p>
 
-                      <div className="flex justify-between items-center mt-3">
+                      <div className="flex justify-between items-center mt-3 px-2 mb-3">
                         {/* SELECT */}
                         <div>
+                          <label htmlFor="quantity">Quantity:</label>
                           <select
                             data-item={`${JSON.stringify(item)}`}
                             data-previousval={`${basketItemIds[item.id]}`}
                             onChange={handleChange}
-                            className="flex-none bg-gray-100 px-2 py-1 border border-gray-400"
+                            className="flex-none bg-gray-100 px-2 py-1 border border-gray-400 ml-2"
                           >
                             <option>{basketItemIds[item.id]}</option>
                             <option>1</option>
@@ -143,6 +144,11 @@ function BasketPage() {
                             <option>8</option>
                             <option>9</option>
                             <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
                           </select>
                         </div>
 
@@ -163,7 +169,7 @@ function BasketPage() {
                           onClick={handleRemoveItem}
                           data-item={`${JSON.stringify(item)}`}
                           data-previousval={`${basketItemIds[item.id]}`}
-                          className="border px-2 py-1 hover:bg-gray-200"
+                          className="hover:text-gray-800 underline"
                         >
                           Remove
                         </button>
@@ -180,8 +186,8 @@ function BasketPage() {
                     {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
                   </p>
                 </div>
-                <div className="w-full flex justify-end">
-                  <button className="inline-flex w-full items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                <div className="w-full flex justify-end mb-3">
+                  <button className="inline-flex w-full items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                     Order Now
                   </button>
                 </div>
