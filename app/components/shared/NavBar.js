@@ -56,23 +56,23 @@ function Navbar() {
                 <p className="text-red-700 font-bold italic">Order Now:</p>
                 <a
                    href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
-                  className="mx-3 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                  className="mx-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
                 >
                   <i className="text-3xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                   <span>WhatsApp</span>
                 </a>
                 <a
                   href="https://www.facebook.com/messages/t/harnaks"
-                  className="mr-3 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                  className="mr-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
                 >
                   <i className="text-3xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                   <span>Facebook</span>
                 </a>
-                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex items-center active:bg-gray-300 hover:bg-gray-200">
+                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-envelope"></i>
                   <span>harnakspices@gmail.com</span>
                 </a>
-                <a href="tel:+2348034042781" className="flex items-center active:bg-gray-300 hover:bg-gray-200">
+                <a href="tel:+2348034042781" className="flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-phone-square"></i>
                   <span>+234(0)803 404 2781</span>
                 </a>
