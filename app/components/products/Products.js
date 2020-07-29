@@ -8,7 +8,7 @@ function Products({ products }) {
       {products.length > 0 ? (
         <div
           style={{ background: '#f8f9fa' }}
-          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:px-3 py-10"
+          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 py-10"
         >
           {products.map((product) => {
             return (
@@ -23,21 +23,17 @@ function Products({ products }) {
                   alt="product"
                 />
 
-                <div className="flex items-center justify-between px-2">
-                  {/* TITLE */}
-                  <p className="text-center text-sm semi-bold">{product.title}</p>
-                  {/* PRICE */}
-                  <div className="flex justify-center">
-                    <div>
-                      <span className="text-red-600 block">
-                        <span className="text-sm">Sale</span>{' '}
-                        <span className="text-2xl font-bold">{product.price}</span>
-                      </span>
-                      <span className="text-sm text-gray-600 -mt-2 block">
-                        Original: {(product.price + 69).toFixed(2)}
-                      </span>
-                    </div>
-                  </div>
+                {/* TITLE */}
+                <p className="text-center text-sm semi-bold">{product.title}</p>
+                {/* PRICE */}
+                <div className="flex items-center justify-center px-2">
+                  <span className="text-red-600 flex items-center">
+                    <span className="text-sm">Sale</span>{' '}
+                    <span className="text-2xl font-bold">{product.price}</span>
+                  </span>
+                  <span className="text-sm text-gray-600 block ml-2">
+                    Original: {(product.price + 69).toFixed(2)}
+                  </span>
                 </div>
               </Link>
             );

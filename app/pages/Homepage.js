@@ -11,9 +11,7 @@ function Homepage() {
   return (
     <Page title={title} image={image} description={description}>
       <div className="py-5">
-        <h1 className="py-6 text-center">
-          Harnak Spices
-        </h1>
+        <h1 className="py-6 text-center">Harnak Spices</h1>
         <Products products={data} />
       </div>
     </Page>

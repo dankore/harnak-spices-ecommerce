@@ -33,7 +33,7 @@ function SingleProductHtml({ singleProduct }) {
       </h1>
 
       {/* SINGLE PRODUCT HTML */}
-      <div className=" custom-shadow grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+      <div className="custom-shadow pb-3 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
         <img
           onClick={() => appDispatch({ type: 'toggleImageViewer' })}
           className="object-cover h-64 w-full cursor-pointer"
@@ -55,16 +55,14 @@ function SingleProductHtml({ singleProduct }) {
                 </span>
               </div>
             </div>
-            <div>
-              <button
-                onClick={handleAddItem}
-                className="inline-flex items-center justify-center px-4 mt-5 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-              >
-                <i className="text-gray-200 mr-2 fas fa-shopping-basket"></i>
-                Add to Basket
-                <span className="ml-2">{count > 0 ? count : ''}</span>
-              </button>
-            </div>
+            <button
+              onClick={handleAddItem}
+              className="inline-flex items-center justify-center px-4 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+            >
+              <i className="text-gray-200 mr-2 fas fa-shopping-basket"></i>
+              Add to Basket
+              <span className="ml-2">{count > 0 ? count : ''}</span>
+            </button>
           </div>
         </div>
       </div>
