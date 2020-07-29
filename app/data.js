@@ -8,7 +8,7 @@ module.exports = {
         'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
       category: 'men clothing',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594184080/samples/ecommerce/analog-classic.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/q_auto:good/v1594184080/samples/ecommerce/analog-classic.jpg',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ module.exports = {
         'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
       category: 'men clothing',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594184086/samples/ecommerce/shoes.png',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/q_auto:good/v1594184086/samples/ecommerce/shoes.png',
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ module.exports = {
         'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
       category: 'men clothing',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594184089/samples/ecommerce/leather-bag-gray.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/q_auto:good/v1594184089/samples/ecommerce/leather-bag-gray.jpg',
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ module.exports = {
         'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
       category: 'men clothing',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594184090/samples/ecommerce/accessories-bag.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/q_auto:good/v1594184090/samples/ecommerce/accessories-bag.jpg',
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ module.exports = {
         'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
       category: 'men clothing',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594184089/samples/ecommerce/car-interior-design.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/q_auto:good/v1594184089/samples/ecommerce/car-interior-design.jpg',
     },
   ],
 };
