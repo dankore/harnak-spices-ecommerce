@@ -8,5 +8,11 @@ const PurgeOptions = {
 };
 
 module.exports = {
-  plugins: [require('tailwindcss'), require('autoprefixer'), PurgeCss(PurgeOptions)],
+  plugins: [
+    //
+    require('tailwindcss'),
+    require('autoprefixer'),
+    PurgeCss(PurgeOptions),
+    //
+  ],
 };

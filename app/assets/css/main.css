@@ -792,6 +792,11 @@ img {
   padding-right: 2.5rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
