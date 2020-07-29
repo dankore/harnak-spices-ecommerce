@@ -81,7 +81,7 @@ function Navbar() {
           </div>
           <div className="text-sm absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
             <div className="block lg:hidden relative">
-              <Link to="/basket" className="text-center active:bg-gray-300 px-2 py-1 hover:bg-gray-200">
+              <Link to="/basket" className="text-center active:bg-gray-300 px-2 py-1 block hover:bg-gray-200">
                 <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
                 <span className="block text-red-600">
                   {' '}
