@@ -17880,6 +17880,10 @@ video {
 /* NON-TAILWIND CSS
    ========================================================================== */
 
+.preventAutoZoom {
+  touch-action: none;
+}
+
 .word-break {
   word-break: break-word;
 }

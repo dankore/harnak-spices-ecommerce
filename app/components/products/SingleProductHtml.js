@@ -57,7 +57,7 @@ function SingleProductHtml({ singleProduct }) {
             </div>
             <button
               onClick={handleAddItem}
-              className="relative inline-flex items-center justify-center px-10 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              className="preventAutoZoom relative inline-flex items-center justify-center px-10 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
             >
               <i className="absolute left-0 ml-px text-gray-200 fas fa-shopping-basket"></i>
               Add to Basket
