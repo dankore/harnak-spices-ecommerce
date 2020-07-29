@@ -98,6 +98,27 @@ function BasketPage() {
   return (
     <Page title="Basket">
       <div className="w-full pt-12 pb-3">
+        <h2 className="mb-5 max-w-5xl mx-auto">
+          Your cart has{' '}
+          {appState.basket.length > 1
+            ? appState.basket.length + ' items'
+            : appState.basket.length + ' item'}{' '}
+        </h2>
+        <div className="max-w-5xl mx-auto custom-shadow p-5 lg:hidden mb-5">
+          <div className="mb-5 flex justify-between w-full">
+            <p>Grand total</p>
+            <p className="font-semibold">
+              {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+            </p>
+          </div>
+          <p className="text-center">
+            <span className="text-pink-700">Congrats</span> — you saved{' '}
+            <span className="text-pink-700">
+              {new Intl.NumberFormat().format(Math.ceil(savings))}
+            </span>{' '}
+            or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
+          </p>
+        </div>
         {basketItemsUnique.length > 0 ? (
           <div className="max-w-5xl mx-auto lg:flex">
             <div>
@@ -180,7 +201,7 @@ function BasketPage() {
             </div>
             <div style={{ minWidth: 400 + 'px' }} className="w-full lg:mt-px">
               <div>
-                <div className="custom-shadow p-5">
+                <div className="custom-shadow p-5 lg:block hidden">
                   <div className="mb-5 flex justify-between">
                     <p>Grand total</p>
                     <p className="font-semibold">
@@ -221,9 +242,9 @@ function BasketPage() {
                     </a>
                   </div>
                 </div>
-                <div className="w-full custom-shadow mt-5">
+                <div className="custom-shadow mt-5">
                   <h2 className="px-3 py-1 bg-red-400 text-white text-2xl text-center">
-                     Suleja, Niger State
+                    Suleja, Niger State
                   </h2>
                   <img
                     className="object-cover h-56 w-full mb-2"
