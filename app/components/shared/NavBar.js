@@ -185,7 +185,7 @@ function Navbar() {
               href="mailto:harnakspices@gmail.com"
               className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
-              <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+              <i style={{ fontSize: `${2.1}rem` }} className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
               <span>Order by Email: harnakspices@gmail.com</span>
             </a>
             <a
