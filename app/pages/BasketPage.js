@@ -104,7 +104,7 @@ function BasketPage() {
             ? appState.basket.length + ' items'
             : appState.basket.length + ' item'}{' '}
         </h2>
-        <div className="pt-12" style={{ background: '#f8f9fa' }}>
+        <div className="py-12" style={{ background: '#f8f9fa' }}>
           <div className="max-w-5xl mx-auto custom-shadow p-5 lg:hidden mb-5">
             <div className="mb-5 flex justify-between w-full">
               <p>Grand total</p>
