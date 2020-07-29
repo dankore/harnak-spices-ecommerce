@@ -179,25 +179,58 @@ function BasketPage() {
                 })}
             </div>
             <div style={{ minWidth: 400 + 'px' }} className="w-full lg:mt-px">
-              <div className="custom-shadow p-5">
-                <div className="mb-5 flex justify-between">
-                  <p>Grand total</p>
-                  <p className="font-semibold">
-                    {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+              <div>
+                <div className="custom-shadow p-5">
+                  <div className="mb-5 flex justify-between">
+                    <p>Grand total</p>
+                    <p className="font-semibold">
+                      {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+                    </p>
+                  </div>
+                  <p className="text-center">
+                    <span className="text-pink-700">Congrats</span> — you saved{' '}
+                    <span className="text-pink-700">
+                      {new Intl.NumberFormat().format(Math.ceil(savings))}
+                    </span>{' '}
+                    or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
                   </p>
                 </div>
-                <div className="w-full flex justify-end mb-3">
-                  <button className="inline-flex w-full items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                <div className="custom-shadow mt-5">
+                  <h2 className="px-3 py-1 bg-blue-600 text-white text-2xl text-center">
                     Order Now
-                  </button>
+                  </h2>
+                  <div className="p-4">
+                    <div className="mb-5 flex items-center">
+                      <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
+                      <span>Order on WhatsApp</span>
+                    </div>
+                    <a
+                      href="https://www.facebook.com/messages/t/harnaks"
+                      className="mb-5 flex items-center"
+                    >
+                      <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
+                      <span>Order on Facebook</span>
+                    </a>
+                    <a href="mailto:harnakspices@gmail.com" className="mb-5 flex items-center">
+                      <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+                      <span>Order by Email: harnakspices@gmail.com</span>
+                    </a>
+                    <a href="tel:+2348034042781" className="mb-5 flex items-center">
+                      <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
+                      <span>Order by Call: +234(0)803 404 2781</span>
+                    </a>
+                  </div>
                 </div>
-                <p>
-                  <span className="text-pink-700">Congrats</span> — you saved{' '}
-                  <span className="text-pink-700">
-                    {new Intl.NumberFormat().format(Math.ceil(savings))}
-                  </span>{' '}
-                  or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
-                </p>
+                <div className="w-full custom-shadow mt-5">
+                  <h2 className="px-3 py-1 bg-red-400 text-white text-2xl text-center">
+                     Suleja, Niger State
+                  </h2>
+                  <img
+                    className="object-cover h-56 w-full mb-2"
+                    src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1596000606/Others/suleja_bqrohv.png"
+                    alt="suleja"
+                  />
+                </div>
               </div>
             </div>
           </div>
