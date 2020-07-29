@@ -488,6 +488,18 @@ img {
   background-color: rgba(247, 250, 252, var(--bg-opacity));
 }
 
+.active\:bg-gray-200:active {
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+}
+
+.active\:bg-red-200:active {
+  --bg-opacity: 1;
+  background-color: #fed7d7;
+  background-color: rgba(254, 215, 215, var(--bg-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }

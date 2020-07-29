@@ -78,7 +78,7 @@ function Navbar() {
           </div>
           <div className="text-sm absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
             <div className="block lg:hidden relative">
-              <Link to="/basket" className="text-center">
+              <Link to="/basket" className="text-center active:bg-gray-300 px-2 py-1 hover:bg-gray-200">
                 <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
                 <span className="block text-red-600">
                   {' '}
@@ -89,7 +89,7 @@ function Navbar() {
             {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative hidden lg:block">
               <div className="flex items-center">
-                <Link to="/basket" className="flex items-center mr-3 relative">
+                <Link to="/basket" className="flex items-center mr-3 relative active:bg-gray-300 px-2 py-1 hover:bg-gray-200">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
                   <span className="absolute text-red-600 ml-8 -mt-5">
                     {appState?.basket.length > 0 ? appState?.basket.length : ''}
