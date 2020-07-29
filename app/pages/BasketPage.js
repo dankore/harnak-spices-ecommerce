@@ -105,166 +105,168 @@ function BasketPage() {
             : appState.basket.length + ' item'}{' '}
         </h2>
         <div className="py-12" style={{ background: '#f8f9fa' }}>
-          <div className="max-w-5xl mx-auto custom-shadow p-5 lg:hidden mb-5">
-            <div className="mb-5 flex justify-between w-full">
-              <p>Grand total</p>
-              <p className="font-semibold">
-                {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
-              </p>
-            </div>
-            <p className="text-center">
-              <span className="text-pink-700">Congrats</span> — you saved{' '}
-              <span className="text-pink-700">
-                {new Intl.NumberFormat().format(Math.ceil(savings))}
-              </span>{' '}
-              or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
-            </p>
-          </div>
           {basketItemsUnique.length > 0 ? (
-            <div className="max-w-5xl mx-auto lg:flex">
-              <div>
-                {basketItemsUnique.length > 0 &&
-                  basketItemsUnique.map((item, index) => {
-                    return (
-                      <div className="relative mb-12 border custom-shadow" key={index}>
-                        {/* IMAGE */}
-                        <div className="w-full">
-                          <img
-                            onClick={handleImageView}
-                            data-title={`${item.title}`}
-                            className="object-cover h-56 w-full mb-2 cursor-pointer"
-                            src={item.image}
-                            alt="product"
-                          />
-                        </div>
-                        {/* IMAGE VIEWER */}
-                        {appState.toggleImageViewer && (
-                          <ImageViewer image={state.image} title={state.title} />
-                        )}
+            <>
+              <div className="max-w-5xl mx-auto custom-shadow p-5 lg:hidden mb-5">
+                <div className="mb-5 flex justify-between w-full">
+                  <p>Grand total</p>
+                  <p className="font-semibold">
+                    {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+                  </p>
+                </div>
+                <p className="text-center">
+                  <span className="text-pink-700">Congrats</span> — you saved{' '}
+                  <span className="text-pink-700">
+                    {new Intl.NumberFormat().format(Math.ceil(savings))}
+                  </span>{' '}
+                  or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
+                </p>
+              </div>
+              <div className="max-w-5xl mx-auto lg:flex">
+                <div>
+                  {basketItemsUnique.length > 0 &&
+                    basketItemsUnique.map((item, index) => {
+                      return (
+                        <div className="relative mb-12 border custom-shadow" key={index}>
+                          {/* IMAGE */}
+                          <div className="w-full">
+                            <img
+                              onClick={handleImageView}
+                              data-title={`${item.title}`}
+                              className="object-cover h-56 w-full mb-2 cursor-pointer"
+                              src={item.image}
+                              alt="product"
+                            />
+                          </div>
+                          {/* IMAGE VIEWER */}
+                          {appState.toggleImageViewer && (
+                            <ImageViewer image={state.image} title={state.title} />
+                          )}
 
-                        {/* TITLE */}
-                        <p className="text-xl text-gray-800 semi-bold pl-2">{item.title}</p>
+                          {/* TITLE */}
+                          <p className="text-xl text-gray-800 semi-bold pl-2">{item.title}</p>
 
-                        <div className="flex justify-between items-center mt-3 px-2 mb-3">
-                          {/* SELECT */}
-                          <div>
-                            <label htmlFor="quantity">Quantity:</label>
-                            <select
+                          <div className="flex justify-between items-center mt-3 px-2 mb-3">
+                            {/* SELECT */}
+                            <div>
+                              <label htmlFor="quantity">Quantity:</label>
+                              <select
+                                data-item={`${JSON.stringify(item)}`}
+                                data-previousval={`${basketItemIds[item.id]}`}
+                                onChange={handleChange}
+                                className="flex-none bg-gray-100 px-2 py-1 border border-gray-400 ml-2"
+                              >
+                                <option>{basketItemIds[item.id]}</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                              </select>
+                            </div>
+
+                            {/* PRICE */}
+                            <div className="flex items-center">
+                              <s className="text-sm text-gray-600 block">
+                                {Math.ceil(item.price + 69)}
+                              </s>
+                              <span className="block mx-3">{Math.ceil(item.price)} each</span>
+                              <span className="font-bold block">
+                                {new Intl.NumberFormat().format(
+                                  Math.ceil(item.price) * basketItemIds[item.id]
+                                )}
+                              </span>
+                            </div>
+
+                            <button
+                              onClick={handleRemoveItem}
                               data-item={`${JSON.stringify(item)}`}
                               data-previousval={`${basketItemIds[item.id]}`}
-                              onChange={handleChange}
-                              className="flex-none bg-gray-100 px-2 py-1 border border-gray-400 ml-2"
+                              className="hover:text-gray-800 underline"
                             >
-                              <option>{basketItemIds[item.id]}</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10</option>
-                              <option>11</option>
-                              <option>12</option>
-                              <option>13</option>
-                              <option>14</option>
-                              <option>15</option>
-                            </select>
+                              Remove
+                            </button>
                           </div>
-
-                          {/* PRICE */}
-                          <div className="flex items-center">
-                            <s className="text-sm text-gray-600 block">
-                              {Math.ceil(item.price + 69)}
-                            </s>
-                            <span className="block mx-3">{Math.ceil(item.price)} each</span>
-                            <span className="font-bold block">
-                              {new Intl.NumberFormat().format(
-                                Math.ceil(item.price) * basketItemIds[item.id]
-                              )}
-                            </span>
-                          </div>
-
-                          <button
-                            onClick={handleRemoveItem}
-                            data-item={`${JSON.stringify(item)}`}
-                            data-previousval={`${basketItemIds[item.id]}`}
-                            className="hover:text-gray-800 underline"
-                          >
-                            Remove
-                          </button>
                         </div>
+                      );
+                    })}
+                </div>
+                <div style={{ minWidth: 400 + 'px' }} className="w-full lg:ml-2 lg:mt-px">
+                  <div>
+                    <div className="custom-shadow p-5 lg:block hidden">
+                      <div className="mb-5 flex justify-between">
+                        <p>Grand total</p>
+                        <p className="font-semibold">
+                          {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+                        </p>
                       </div>
-                    );
-                  })}
-              </div>
-              <div style={{ minWidth: 400 + 'px' }} className="w-full lg:ml-2 lg:mt-px">
-                <div>
-                  <div className="custom-shadow p-5 lg:block hidden">
-                    <div className="mb-5 flex justify-between">
-                      <p>Grand total</p>
-                      <p className="font-semibold">
-                        {new Intl.NumberFormat().format(Math.ceil(totalAfterSavings))}
+                      <p className="text-center">
+                        <span className="text-pink-700">Congrats</span> — you saved{' '}
+                        <span className="text-pink-700">
+                          {new Intl.NumberFormat().format(Math.ceil(savings))}
+                        </span>{' '}
+                        or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
                       </p>
                     </div>
-                    <p className="text-center">
-                      <span className="text-pink-700">Congrats</span> — you saved{' '}
-                      <span className="text-pink-700">
-                        {new Intl.NumberFormat().format(Math.ceil(savings))}
-                      </span>{' '}
-                      or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
-                    </p>
-                  </div>
-                  <div className="custom-shadow mt-5">
-                    <h2 className="px-3 py-1 bg-blue-600 text-white text-2xl text-center">
-                      Order Now
-                    </h2>
-                    <div>
-                      <a
-                        href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
-                        className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
-                      >
-                        <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
-                        <span>Order on WhatsApp</span>
-                      </a>
-                      <a
-                        href="https://www.facebook.com/messages/t/harnaks"
-                        className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
-                      >
-                        <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
-                        <span>Order on Facebook</span>
-                      </a>
-                      <a
-                        href="mailto:harnakspices@gmail.com"
-                        className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
-                      >
-                        <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
-                        <span>Order by Email: harnakspices@gmail.com</span>
-                      </a>
-                      <a
-                        href="tel:+2348034042781"
-                        className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
-                      >
-                        <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
-                        <span>Order by Call: +234(0)803 404 2781</span>
-                      </a>
+                    <div className="custom-shadow mt-5">
+                      <h2 className="px-3 py-1 bg-blue-600 text-white text-2xl text-center">
+                        Order Now
+                      </h2>
+                      <div>
+                        <a
+                          href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+                          className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                        >
+                          <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
+                          <span>Order on WhatsApp</span>
+                        </a>
+                        <a
+                          href="https://www.facebook.com/messages/t/harnaks"
+                          className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                        >
+                          <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
+                          <span>Order on Facebook</span>
+                        </a>
+                        <a
+                          href="mailto:harnakspices@gmail.com"
+                          className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                        >
+                          <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+                          <span>Order by Email: harnakspices@gmail.com</span>
+                        </a>
+                        <a
+                          href="tel:+2348034042781"
+                          className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
+                        >
+                          <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
+                          <span>Order by Call: +234(0)803 404 2781</span>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div className="custom-shadow mt-5">
-                    <h2 className="px-3 py-1 bg-red-400 text-white text-2xl text-center">
-                      Suleja, Niger State
-                    </h2>
-                    <img
-                      className="object-cover h-56 w-full mb-2"
-                      src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1596000606/Others/suleja_bqrohv.png"
-                      alt="suleja"
-                    />
+                    <div className="custom-shadow mt-5">
+                      <h2 className="px-3 py-1 bg-red-400 text-white text-2xl text-center">
+                        Suleja, Niger State
+                      </h2>
+                      <img
+                        className="object-cover h-56 w-full mb-2"
+                        src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1596000606/Others/suleja_bqrohv.png"
+                        alt="suleja"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </>
           ) : (
             <div className="text-2xl text-center">Empty basket</div>
           )}
