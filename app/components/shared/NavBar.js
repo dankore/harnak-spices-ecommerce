@@ -56,23 +56,23 @@ function Navbar() {
                 <p className="text-red-700 font-bold italic">Order Now:</p>
                 <a
                    href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
-                  className="mx-3 flex items-center"
+                  className="mx-3 flex items-center active:bg-gray-300 hover:bg-gray-200"
                 >
                   <i className="text-3xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
                   <span>WhatsApp</span>
                 </a>
                 <a
                   href="https://www.facebook.com/messages/t/harnaks"
-                  className="mr-3 flex items-center"
+                  className="mr-3 flex items-center active:bg-gray-300 hover:bg-gray-200"
                 >
                   <i className="text-3xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                   <span>Facebook</span>
                 </a>
-                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex items-center">
+                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex items-center active:bg-gray-300 hover:bg-gray-200">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-envelope"></i>
                   <span>harnakspices@gmail.com</span>
                 </a>
-                <a href="tel:+2348034042781" className="flex items-center">
+                <a href="tel:+2348034042781" className="flex items-center active:bg-gray-300 hover:bg-gray-200">
                   <i className="text-3xl text-gray-700 mr-2 fas fa-phone-square"></i>
                   <span>+234(0)803 404 2781</span>
                 </a>
@@ -157,33 +157,33 @@ function Navbar() {
           <div className="pt-2 pb-3">
             <a
                href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
-              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+              className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
                <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
             </a>
             <a
               href="https://www.facebook.com/messages/t/harnaks"
-              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+              className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
               <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
               <span>Order on Facebook</span>
             </a>
             <a
               href="mailto:harnakspices@gmail.com"
-              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+              className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
               <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
               <span>Order by Email: harnakspices@gmail.com</span>
             </a>
             <a
               href="tel:+2348034042781"
-              className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200"
+              className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
               <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
               <span>Order by Call: +234(0)803 404 2781</span>
             </a>
-            <div className="pl-4 pt-1 pb-1 flex items-center hover:bg-gray-200 cursor-pointer">
+            <div className="pl-4 pt-1 pb-1 flex items-center">
               <i className="text-4xl lg:text-4xl text-gray-700 mr-2 fas fa-globe-africa"></i>
               <span> Suleja, Niger State</span>
             </div>
