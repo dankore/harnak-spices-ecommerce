@@ -101,7 +101,7 @@ function BasketPage() {
         {basketItemsUnique.length > 0 ? (
           <>
             <h2 className="max-w-5xl text-xl mx-auto pl-2">
-              Your cart has{' '}
+              <strong>Your cart:</strong>{' '}
               {appState.basket.length > 1
                 ? appState.basket.length + ' items'
                 : appState.basket.length + ' item'}{' '}
@@ -228,28 +228,28 @@ function BasketPage() {
                           className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
                         >
                           <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
-                          <span>Order on WhatsApp</span>
+                          <span>WhatsApp</span>
                         </a>
                         <a
                           href="https://www.facebook.com/messages/t/harnaks"
                           className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
                         >
                           <i className="text-4xl text-blue-500 mr-2 fab fa-facebook-square"></i>
-                          <span>Order on Facebook</span>
+                          <span>Facebook</span>
                         </a>
                         <a
                           href="mailto:harnakspices@gmail.com"
                           className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
                         >
                           <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
-                          <span>Order by Email: harnakspices@gmail.com</span>
+                          <span>Email: harnakspices@gmail.com</span>
                         </a>
                         <a
                           href="tel:+2348034042781"
                           className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
                         >
                           <i className="text-4xl text-gray-700 mr-2 fas fa-phone-square"></i>
-                          <span>Order by Call: +234(0)803 404 2781</span>
+                          <span>Call: +234(0)803 404 2781</span>
                         </a>
                       </div>
                     </div>
