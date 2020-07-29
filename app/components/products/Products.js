@@ -24,7 +24,7 @@ function Products({ products }) {
                 />
 
                 {/* TITLE */}
-                <p className="text-center text-sm semi-bold">{product.title}</p>
+                <p className="text-center text-xl text-gray-800 semi-bold">{product.title}</p>
                 {/* PRICE */}
                 <div className="flex items-center justify-center px-2">
                   <span className="text-red-600 flex items-center">

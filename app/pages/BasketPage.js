@@ -121,7 +121,7 @@ function BasketPage() {
                       )}
 
                       {/* TITLE */}
-                      <p className="pl-2">{item.title}</p>
+                      <p className="text-xl text-gray-800 semi-bold pl-2">{item.title}</p>
 
                       <div className="flex justify-between items-center mt-3">
                         {/* SELECT */}

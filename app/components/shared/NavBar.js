@@ -80,7 +80,10 @@ function Navbar() {
             <div className="block lg:hidden relative">
               <Link to="/basket" className="text-center">
                 <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
-                <span className="block text-red-600">{appState?.basket.length}</span>
+                <span className="block text-red-600">
+                  {' '}
+                  {appState?.basket.length > 0 ? appState?.basket.length : ''}
+                </span>
               </Link>
             </div>
             {/*  PROFILE DROPDOWN */}

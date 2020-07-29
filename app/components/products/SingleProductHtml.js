@@ -27,7 +27,7 @@ function SingleProductHtml({ singleProduct }) {
         <ImageViewer image={singleProduct.image} title={singleProduct.title} />
       )}
 
-      <h1 className="mb-5 text-2xl text-center">
+      <h1 className="word-break mb-5 text-2xl text-center">
         {/* TITLE */}
         {singleProduct.title}
       </h1>
@@ -57,11 +57,11 @@ function SingleProductHtml({ singleProduct }) {
             </div>
             <button
               onClick={handleAddItem}
-              className="inline-flex items-center justify-center px-4 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              className="relative inline-flex items-center justify-center px-10 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
             >
-              <i className="text-gray-200 mr-2 fas fa-shopping-basket"></i>
+              <i className="absolute left-0 ml-px text-gray-200 fas fa-shopping-basket"></i>
               Add to Basket
-              <span className="ml-2">{count > 0 ? count : ''}</span>
+              <span className="absolute right-0 mr-px">{count > 0 ? count : ''}</span>
             </button>
           </div>
         </div>
