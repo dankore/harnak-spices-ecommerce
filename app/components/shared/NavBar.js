@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const logo =
-      'https://raw.githubusercontent.com/dankore/harnak-spices-ecommerce/master/app/assets/images/logo2.png',
+      'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_400,f_auto/v1596114880/har/harnak_logo.png',
     appDispatch = useContext(DispatchContext),
     appState = useContext(StateContext);
 
