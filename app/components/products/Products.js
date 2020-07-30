@@ -32,7 +32,7 @@ function Products({ products }) {
                     <span className="text-2xl font-bold">{product.price}</span>
                   </span>
                   <span className="text-sm text-gray-600 block ml-2">
-                    Original: {(product.price + 69).toFixed(2)}
+                    Original: {(product.price + product.price * 0.3).toFixed(2)}
                   </span>
                 </div>
               </Link>
