@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white relative border-b custom-shadow-nav">
-      <div className="max-w-7xl mx-auto px-2 lg:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 lg:px-6">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
             {/* <!-- Mobile menu button--> */}
@@ -185,7 +185,10 @@ function Navbar() {
               href="mailto:harnakspices@gmail.com"
               className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
-              <i className="text-4xl text-gray-700 mr-2 fas fa-envelope"></i>
+              <i
+                style={{ fontSize: `${2.1}rem` }}
+                className="text-4xl text-gray-700 mr-2 fas fa-envelope"
+              ></i>
               <span>Order by Email: harnakspices@gmail.com</span>
             </a>
             <a
