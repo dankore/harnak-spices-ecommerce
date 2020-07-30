@@ -31,11 +31,11 @@ function Products({ products }) {
                 {/* PRICE */}
                 <div className="flex items-center justify-center px-2">
                   <span className="text-red-600 flex items-center">
-                    <span className="text-sm">Sale</span>{' '}
+                    <span className="text-sm mr-1">Sale:</span>{' '}
                     <span className="text-2xl font-bold">{product.price}</span>
                   </span>
                   <span className="text-sm text-gray-600 block ml-2">
-                    Original: {(product.price + product.price * appState.DISCOUNT).toFixed(2)}
+                    Originally: {product.price + product.price * appState.DISCOUNT}
                   </span>
                 </div>
               </Link>

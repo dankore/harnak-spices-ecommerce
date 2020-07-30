@@ -10,7 +10,7 @@ function ViewSingleProduct() {
     feed: data[id - 1],
   };
 
-  const descriptionSEO = `SALE ${(singleProduct.feed.price + 69).toFixed(2)}! Price before sale: ${
+  const descriptionSEO = `SALE ${singleProduct.feed.price + 69}! Price before sale: ${
     singleProduct.feed.price
   }.`;
 

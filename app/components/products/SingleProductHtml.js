@@ -48,12 +48,11 @@ function SingleProductHtml({ singleProduct }) {
               <div className="flex justify-center">
                 <div>
                   <span className="text-red-600 block">
-                    <span className="text-sm">Sale</span>{' '}
+                    <span className="text-sm">Sale:</span>{' '}
                     <span className="text-2xl font-bold">{singleProduct.price}</span>
                   </span>
                   <span className="text-sm text-gray-600 -mt-2 block">
-                    Original:{' '}
-                    {(singleProduct.price + singleProduct.price * appState.DISCOUNT).toFixed(2)}
+                    Originally: {singleProduct.price + singleProduct.price * appState.DISCOUNT}
                   </span>
                 </div>
               </div>
