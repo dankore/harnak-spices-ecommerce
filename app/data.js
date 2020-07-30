@@ -7,7 +7,7 @@ module.exports = {
       description: 'Coriander Seeds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_2_ngcnzj.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_2_ngcnzj.jpg',
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ module.exports = {
       description: 'Tumeric Powder',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_1_dsruzb.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_1_dsruzb.jpg',
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ module.exports = {
       description: 'Fennel Seeds',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.52_AM_1_tlv3vf.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.52_AM_1_tlv3vf.jpg',
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ module.exports = {
       description: 'Yaji - Chilli Seasoning',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_z6v3wl.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_z6v3wl.jpg',
     },
     {
       id: 5,
@@ -43,7 +43,7 @@ module.exports = {
       description: 'Cardimon Ponds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_1_fpux0r.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_1_fpux0r.jpg',
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ module.exports = {
       description: 'Cumming Seeds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_on6tcf.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_on6tcf.jpg',
     },
     {
       id: 7,
@@ -61,7 +61,7 @@ module.exports = {
       description: 'Garam Masala Cooking Spice',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_500,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_700,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
     },
   ],
 };

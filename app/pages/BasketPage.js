@@ -123,7 +123,7 @@ function BasketPage() {
                   or <span className="text-pink-700">{Math.floor(percentSavings)}%!</span>{' '}
                 </p>
               </div>
-              <div className="max-w-5xl mx-auto lg:flex">
+              <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2">
                 <div>
                   {basketItemsUnique.length > 0 &&
                     basketItemsUnique.map((item, index) => {
