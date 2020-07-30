@@ -55,7 +55,7 @@ function Navbar() {
               <div className="flex items-center">
                 <p className="text-red-700 font-bold italic">Order Now:</p>
                 <a
-                   href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+                  href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
                   className="mx-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
                 >
                   <i className="text-3xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
@@ -68,11 +68,17 @@ function Navbar() {
                   <i className="text-3xl text-blue-500 mr-2 fab fa-facebook-square"></i>
                   <span>Facebook</span>
                 </a>
-                <a href="mailto:harnakspices@gmail.com" className="mr-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200">
+                <a
+                  href="mailto:harnakspices@gmail.com"
+                  className="mr-3 flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
+                >
                   <i className="text-3xl text-gray-700 mr-2 fas fa-envelope"></i>
                   <span>harnakspices@gmail.com</span>
                 </a>
-                <a href="tel:+2348034042781" className="flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200">
+                <a
+                  href="tel:+2348034042781"
+                  className="flex py-1 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
+                >
                   <i className="text-3xl text-gray-700 mr-2 fas fa-phone-square"></i>
                   <span>+234(0)803 404 2781</span>
                 </a>
@@ -81,7 +87,10 @@ function Navbar() {
           </div>
           <div className="text-sm absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
             <div className="block lg:hidden relative">
-              <Link to="/basket" className="text-center active:bg-gray-300 px-2 py-1 block hover:bg-gray-200">
+              <Link
+                to="/basket"
+                className="text-center active:bg-gray-300 px-2 py-1 block hover:bg-gray-200"
+              >
                 <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
                 <span className="block text-red-600">
                   {' '}
@@ -92,7 +101,10 @@ function Navbar() {
             {/*  PROFILE DROPDOWN */}
             <div className="ml-3 relative hidden lg:block">
               <div className="flex items-center">
-                <Link to="/basket" className="flex items-center mr-3 relative active:bg-gray-300 px-2 py-1 hover:bg-gray-200">
+                <Link
+                  to="/basket"
+                  className="flex items-center mr-3 relative active:bg-gray-300 px-2 py-1 hover:bg-gray-200"
+                >
                   <i className="text-3xl text-gray-700 mr-2 fas fa-shopping-basket"></i>
                   <span className="absolute text-red-600 ml-8 -mt-5">
                     {appState?.basket.length > 0 ? appState?.basket.length : ''}
@@ -156,10 +168,10 @@ function Navbar() {
         <div style={{ zIndex: 2 }} className="block lg:hidden absolute bg-white inset-x-0 h-screen">
           <div className="pt-2 pb-3">
             <a
-               href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
+              href="https://chat.whatsapp.com/Clrq9WlqBjnEdPrgMbxyt8"
               className="pl-4 pt-1 pb-1 flex items-center active:bg-gray-300 hover:bg-gray-200"
             >
-               <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
+              <i className="text-4xl text-green-500 mr-2 fab fa-whatsapp-square"></i>
               <span>Order on WhatsApp</span>
             </a>
             <a
