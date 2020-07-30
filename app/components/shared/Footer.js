@@ -14,7 +14,10 @@ function Footer() {
           onClick={() => appDispatch({ type: 'toggleImageViewer' })}
           className="modal-overlay bg-black absolute cursor-pointer"
         >
-          <div style={{ right: 20 + "%" }} className="absolute flex items-center bottom-0 shadow-lg">
+          <div
+            style={{ right: 20 + '%', zIndex: 11 }}
+            className="absolute flex items-center bottom-0 shadow-lg"
+          >
             <button className="rounded-full text-3xl focus:outline-none transition ease-in-out duration-150 px-3 bg-white">
               X
             </button>
