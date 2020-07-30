@@ -126,7 +126,5 @@ h1 {
   -webkit-transition: 200ms ease-in-out;
   -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  border-radius: 10px;
-  width: 500px;
   max-width: 90%;
 }
