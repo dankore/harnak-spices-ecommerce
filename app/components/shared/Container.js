@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Container(props) {
   return (
-    <div style={{ minHeight: `calc(100vh - 20rem)` }} className="bg-white">
+    <div style={{ minHeight: `calc(100vh - 20rem)` }} className="mt-24 bg-white">
       {props.children}
     </div>
   );

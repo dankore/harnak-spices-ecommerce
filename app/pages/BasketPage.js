@@ -97,7 +97,7 @@ function BasketPage() {
 
   return (
     <Page title="Basket">
-      <div className="w-full pt-12">
+      <div className="w-full">
         {basketItemsUnique.length > 0 ? (
           <>
             <h2 className="max-w-5xl text-xl mx-auto pl-2">
