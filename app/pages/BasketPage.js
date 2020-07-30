@@ -69,7 +69,8 @@ function BasketPage() {
     const basketTotal = removeDuplicatesGetCount(appState.basket).result.reduce(
       (runningTotal, item) => {
         const currTotal =
-          (item.price + 69) * removeDuplicatesGetCount(appState.basket).count[item.id];
+          (item.price + item.price * 0.3) *
+          removeDuplicatesGetCount(appState.basket).count[item.id];
         return runningTotal + currTotal;
       },
       0
@@ -178,7 +179,7 @@ function BasketPage() {
                             {/* PRICE */}
                             <div className="flex items-center">
                               <s className="text-sm text-gray-600 block">
-                                {Math.ceil(item.price + 69)}
+                                {Math.ceil(item.price + item.price * 0.3)}
                               </s>
                               <span className="block mx-3">{Math.ceil(item.price)} each</span>
                               <span className="font-bold block">
