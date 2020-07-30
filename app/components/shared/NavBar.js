@@ -111,7 +111,7 @@ function Navbar() {
                       {appState?.basket.length > 0 ? appState?.basket.length : ''}
                     </span>
                   </Link>
-                  <div className="flex items-center">
+                  <div className="flex items-center hidden xl:flex">
                     <i className="text-3xl text-gray-700 mr-2 fas fa-globe-africa"></i>
                     <span> Suleja, Niger State</span>
                   </div>
