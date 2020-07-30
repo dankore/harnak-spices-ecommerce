@@ -22,6 +22,7 @@ function Main() {
     toggleHamburgerMenu: false,
     basket: [],
     addToBasketCount: 0,
+    DISCOUNT: 0.3,
   };
 
   function appReducer(draft, action) {

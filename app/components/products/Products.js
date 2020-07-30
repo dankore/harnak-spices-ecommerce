@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import StateContext from '../../contextsProviders/StateContext';
 
 function Products({ products }) {
+  const appState = useContext(StateContext);
+
   return (
     <>
       {products.length > 0 ? (
@@ -32,7 +35,7 @@ function Products({ products }) {
                     <span className="text-2xl font-bold">{product.price}</span>
                   </span>
                   <span className="text-sm text-gray-600 block ml-2">
-                    Original: {(product.price + product.price * 0.3).toFixed(2)}
+                    Original: {(product.price + product.price * appState.DISCOUNT).toFixed(2)}
                   </span>
                 </div>
               </Link>

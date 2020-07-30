@@ -52,7 +52,8 @@ function SingleProductHtml({ singleProduct }) {
                     <span className="text-2xl font-bold">{singleProduct.price}</span>
                   </span>
                   <span className="text-sm text-gray-600 -mt-2 block">
-                    Original: {(singleProduct.price + singleProduct.price * 0.3).toFixed(2)}
+                    Original:{' '}
+                    {(singleProduct.price + singleProduct.price * appState.DISCOUNT).toFixed(2)}
                   </span>
                 </div>
               </div>
