@@ -14,7 +14,7 @@ function Homepage() {
         <div className="text-center mb-5">
           <h1 className="">Harnak Spices</h1>
           <p className="-mt-4">
-            Suprice your taste buds - <span className="text-red-600 italic">NOW 30% OFF!</span>
+            Suprice your taste buds - <span className="text-red-600 italic">NOW 23% OFF!</span>
           </p>
         </div>
         <Products products={data} />
