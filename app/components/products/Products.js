@@ -13,7 +13,7 @@ function Products({ products }) {
           style={{ background: '#f8f9fa' }}
           className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:p-10"
         >
-          {products.map((product) => {
+          {products.map(product => {
             return (
               <Link
                 to={`/product/${product.id}`}

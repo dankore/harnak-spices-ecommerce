@@ -5,7 +5,7 @@ const http = require('http'),
 
 const server = http.createServer((req, res) => {
   if (req.url == '/') {
-    readStream.on('data', (chunk) => {
+    readStream.on('data', chunk => {
       res.write(chunk);
       res.end();
     });
@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
   }
 
   // ON ERROR
-  readStream.on('error', (error) => {
+  readStream.on('error', error => {
     res.end(error);
   });
 });

@@ -73,7 +73,7 @@ function Main() {
 
     Storage.prototype.deleteItem = function (arrayName, arrayItem) {
       var existingArray = this.getArray(arrayName);
-      var index = existingArray.findIndex((item) => item.id == arrayItem.id); // GET INDEX
+      var index = existingArray.findIndex(item => item.id == arrayItem.id); // GET INDEX
       existingArray.splice(index, 1); // REMOVED ITEM
       this.setItem(arrayName, JSON.stringify(existingArray));
     };

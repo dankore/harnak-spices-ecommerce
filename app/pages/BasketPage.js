@@ -45,7 +45,7 @@ function BasketPage() {
     const url = e.target.src;
     const title = e.target.getAttribute('data-title');
 
-    setState((draft) => {
+    setState(draft => {
       draft.image = url;
       draft.title = title;
     });
