@@ -90,6 +90,7 @@ function Navbar() {
               <div className="block lg:hidden relative">
                 <Link
                   to="/basket"
+                  onClick={() => appDispatch({ type: 'turnOff' })}
                   className="text-center active:bg-gray-300 px-2 py-1 block hover:bg-gray-200"
                 >
                   <i className="text-2xl text-gray-700 fas fa-shopping-basket"></i>
