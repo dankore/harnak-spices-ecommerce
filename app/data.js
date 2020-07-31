@@ -34,7 +34,7 @@ module.exports = {
       description: 'Yaji - Chilli Seasoning',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_z6v3wl.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596084387/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
     },
     {
       id: 5,
@@ -62,6 +62,51 @@ module.exports = {
       category: 'grounded',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
+    },
+    {
+      id: 8,
+      title: 'Star Anise',
+      price: 600,
+      description: 'Star Anise',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114674/har/WhatsApp_Image_2020-07-29_at_10.10.52_AM_ohvhro.jpg',
+    },
+    {
+      id: 9,
+      title: 'Dry Mushroom',
+      price: 400,
+      description: 'Dry Mushroom',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114593/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_hrpicv.jpg',
+    },
+    {
+      id: 10,
+      title: 'Cinnamon Stick and Powder',
+      price: 400,
+      description: 'Cinnamon Stick and Powder',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114546/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_2_lcxetb.jpg',
+    },
+    {
+      id: 11,
+      title: 'Nutmeg Masala',
+      price: 500,
+      description: 'Nutmeg Masala',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114507/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_1_ki9zwv.jpg',
+    },
+    {
+      id: 12,
+      title: 'Nutmeg Masala',
+      price: 500,
+      description: 'Nutmeg Masala',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114507/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_1_ki9zwv.jpg',
     },
   ],
 };
