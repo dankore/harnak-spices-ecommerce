@@ -70,7 +70,7 @@ module.exports = {
       description: 'Star Anise',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114674/har/WhatsApp_Image_2020-07-29_at_10.10.52_AM_ohvhro.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596194911/har/star-anise_hvc6fq.png',
     },
     {
       id: 9,
@@ -92,15 +92,6 @@ module.exports = {
     },
     {
       id: 11,
-      title: 'Nutmeg Masala',
-      price: 500,
-      description: 'Nutmeg Masala',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114507/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_1_ki9zwv.jpg',
-    },
-    {
-      id: 12,
       title: 'Nutmeg Masala',
       price: 500,
       description: 'Nutmeg Masala',
