@@ -258,8 +258,9 @@ function BasketPage() {
                       </div>
                     </div>
                     <div className="custom-shadow mt-5">
-                      <h2 className="px-3 py-1 bg-red-400 text-white text-2xl text-center">
-                        Suleja, Niger State
+                      <h2 className="px-3 py-1 bg-red-400 text-white text-sm text-center">
+                        No, 2 Lamba, off Hassan Dalhatu Road, Unguwan Mallam Ashehu, Suleja, Niger
+                        State
                       </h2>
                       <img
                         className="object-cover h-56 w-full mb-2"
