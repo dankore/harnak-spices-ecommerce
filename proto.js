@@ -27,6 +27,6 @@ let data = [
   },
 ];
 
-var i = data.findIndex((item) => item.id == 1);
+var i = data.findIndex(item => item.id == 1);
 let u = data.splice(i, 1);
 console.log(u, data);
