@@ -19,6 +19,7 @@ function ViewSingleProduct() {
       title={singleProduct.feed.title}
       image={singleProduct.feed.image}
       description={descriptionSEO}
+      url={window.location}
     >
       <SingleProductHtml singleProduct={singleProduct.feed} />
     </Page>
