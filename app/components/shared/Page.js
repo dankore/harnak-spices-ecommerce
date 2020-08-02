@@ -42,7 +42,7 @@ Page.propTypes = {
   title: PropTypes.string,
   description: PropTypes.any,
   image: PropTypes.string,
-  url: PropTypes.string,
+  url: PropTypes.object,
 };
 
 export default Page;

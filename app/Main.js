@@ -88,8 +88,8 @@ function Main() {
       <DispatchContext.Provider value={dispatch}>
         <BrowserRouter>
           <Header />
-          <SeoDefault />
           <Suspense fallback={<LoadingDotsAnimation />}>
+            <SeoDefault />
             <Switch>
               <Route exact path="/">
                 <Homepage />
