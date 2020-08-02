@@ -7,14 +7,16 @@ import NotFound from './404';
 
 function ViewSingleProduct() {
   const { id } = useParams();
+  let singleProduct;
 
+  // CHECK FOR IDs GREATER THAN LENGTH OF DATA
   if (id > data.length) {
     return <NotFound />;
+  } else {
+    singleProduct = {
+      feed: data[id - 1],
+    };
   }
-
-  let singleProduct = {
-    feed: data[id - 1],
-  };
 
   const descriptionSEO = `SALE ${singleProduct.feed.price + 69}! Price before sale: ${
     singleProduct.feed.price
