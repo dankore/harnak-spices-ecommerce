@@ -3,9 +3,15 @@ import Page from '../components/shared/Page';
 import { useParams } from 'react-router-dom';
 import SingleProductHtml from '../components/products/SingleProductHtml';
 import { data } from '../data';
+import NotFound from './404';
 
 function ViewSingleProduct() {
   const { id } = useParams();
+
+  if (id > data.length) {
+    return <NotFound />;
+  }
+
   let singleProduct = {
     feed: data[id - 1],
   };

@@ -13,6 +13,7 @@ import Homepage from './pages/Homepage';
 import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 import SeoDefault from './components/shared/SeoDefault';
 import BasketPage from './pages/BasketPage';
+import NotFound from './pages/404';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 function Main() {
@@ -94,11 +95,14 @@ function Main() {
               <Route exact path="/">
                 <Homepage />
               </Route>
-              <Route path="/product/:id">
+              <Route exact path="/product/:id">
                 <ViewSingleProduct />
               </Route>
               <Route path="/basket">
                 <BasketPage />
+              </Route>
+              <Route>
+                <NotFound />
               </Route>
             </Switch>
           </Suspense>
