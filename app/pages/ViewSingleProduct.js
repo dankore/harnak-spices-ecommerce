@@ -10,7 +10,7 @@ function ViewSingleProduct() {
   let singleProduct;
 
   // CHECK FOR IDs GREATER THAN LENGTH OF DATA
-  if (id > data.length) {
+  if (id > data.length || id <= 0) {
     return <NotFound />;
   } else {
     singleProduct = {
