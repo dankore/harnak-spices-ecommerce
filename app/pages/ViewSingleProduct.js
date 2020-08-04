@@ -13,7 +13,7 @@ function ViewSingleProduct() {
   
 
   // CHECK FOR IDs GREATER THAN LENGTH OF DATA
-  if (id > data.length || id <= 0 || Number.isNaN(id)) {
+  if (id > data.length || id < 1 || Number.isNaN(id)) {
     return <NotFound />;
   } else {
     singleProduct = {
