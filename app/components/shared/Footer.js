@@ -7,7 +7,7 @@ function Footer() {
   const appState = useContext(StateContext);
 
   return (
-    <div className="w-full flex pt-2 justify-center">
+    <div className="w-full flex pt-2 justify-center my-12">
       {/* MODAL OVERLAY */}
       {appState && appState.toggleImageViewer && (
         <div
@@ -29,7 +29,9 @@ function Footer() {
       )}
       <div className="text-center">
         <p>@{new Date().getFullYear()} Harnak Spices </p>
-        <p className="text-gray-700 text-sm">Web design by Adamu M. Dankore </p>
+        <p className="text-gray-700 text-sm">
+          <a href="https://www.dankore.com">Web design by Adamu</a>{' '}
+        </p>
       </div>
     </div>
   );

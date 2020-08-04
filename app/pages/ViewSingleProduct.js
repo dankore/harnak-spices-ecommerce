@@ -6,11 +6,14 @@ import { data } from '../data';
 import NotFound from './404';
 
 function ViewSingleProduct() {
-  const { id } = useParams();
+  let { id } = useParams();
+  id = +id
   let singleProduct;
 
+  
+
   // CHECK FOR IDs GREATER THAN LENGTH OF DATA
-  if (id > data.length || id <= 0) {
+  if (id > data.length || id <= 0 || Number.isNaN(id)) {
     return <NotFound />;
   } else {
     singleProduct = {
