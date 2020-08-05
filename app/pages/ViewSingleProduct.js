@@ -7,10 +7,9 @@ import NotFound from './404';
 
 function ViewSingleProduct() {
   let { id } = useParams();
-  id = +id
+  id = +id;
+  id = Math.floor(id);
   let singleProduct;
-
-  
 
   // CHECK FOR IDs GREATER THAN LENGTH OF DATA
   if (id > data.length || id < 1 || Number.isNaN(id)) {
