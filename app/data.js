@@ -7,7 +7,7 @@ module.exports = {
       description: 'Coriander Seeds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_2_ngcnzj.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/corainder-seeds_jqgxlf.png',
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ module.exports = {
       description: 'Tumeric Powder',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.54_AM_1_dsruzb.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878402/har/nobg/turmeric-powder_b8unuw.png',
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ module.exports = {
       description: 'Fennel Seeds',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.52_AM_1_tlv3vf.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/fennel-seeds_w2y4gg.png',
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ module.exports = {
       description: 'Yaji - Chilli Seasoning',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596084387/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878402/har/nobg/yaji-chilli-seasoning_mvmdcc.png',
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ module.exports = {
       description: 'Cumming Seeds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_on6tcf.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/cumming-seeds_icb9o6.png',
     },
     {
       id: 7,
@@ -61,7 +61,7 @@ module.exports = {
       description: 'Garam Masala Cooking Spice',
       category: 'grounded',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_2_etkmu5.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598879047/har/nobg/garam-masala_wa2y3o.png',
     },
     {
       id: 8,
@@ -70,7 +70,7 @@ module.exports = {
       description: 'Star Anise',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596194911/har/star-anise_hvc6fq.png',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/star_anise_yhdmv6.png',
     },
     {
       id: 9,
@@ -79,7 +79,7 @@ module.exports = {
       description: 'Dry Mushroom',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114593/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_hrpicv.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878402/har/nobg/dry-mushroom_xknhvm.png',
     },
     {
       id: 10,
@@ -88,7 +88,7 @@ module.exports = {
       description: 'Cinnamon Stick and Powder',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114546/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_2_lcxetb.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/cinnamon-stick-and-powder_zumhgu.png',
     },
     {
       id: 11,
@@ -97,7 +97,25 @@ module.exports = {
       description: 'Nutmeg Masala',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_380,f_auto/v1596114507/har/WhatsApp_Image_2020-07-29_at_10.10.51_AM_1_ki9zwv.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/nutmeg-masala_phirj7.png',
+    },
+    {
+      id: 12,
+      title: 'Oregano',
+      price: 500,
+      description: 'Oregano',
+      category: 'seeds',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878402/har/nobg/oregano_mfy8tr.png',
+    },
+    {
+      id: 13,
+      title: 'Ginger Powder',
+      price: 500,
+      description: 'Ginger Powder',
+      category: 'powder',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/ginger-powder_e0e6cp.png',
     },
   ],
 };
