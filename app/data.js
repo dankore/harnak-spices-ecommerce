@@ -47,9 +47,9 @@ module.exports = {
     },
     {
       id: 6,
-      title: 'Cumming Seeds',
+      title: 'Cuming Seeds',
       price: 600,
-      description: 'Cumming Seeds',
+      description: 'Cuming Seeds',
       category: 'seeds',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/cumming-seeds_icb9o6.png',
@@ -125,6 +125,15 @@ module.exports = {
       category: 'powder',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/special-condiment_uykvdg.png',
+    },
+    {
+      id: 15,
+      title: 'Fenugreek Powder',
+      price: 400,
+      description: 'Fenugreek Powder',
+      category: 'powder',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1599220068/har/nobg/fenucreek_seeds_and_powder_sz0ebu.png',
     },
   ],
 };
