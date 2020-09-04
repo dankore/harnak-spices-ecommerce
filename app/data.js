@@ -117,5 +117,14 @@ module.exports = {
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/ginger-powder_e0e6cp.png',
     },
+    {
+      id: 14,
+      title: 'Special Condiment',
+      price: 400,
+      description: 'Special Condiment',
+      category: 'powder',
+      image:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/special-condiment_uykvdg.png',
+    },
   ],
 };
