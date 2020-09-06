@@ -7,17 +7,17 @@ function AboutPage() {
       <div className="flex flex-wrap justify-center">
         <img
           className="custom-shadow m-3"
-          style={{ width: 400 + 'px' }}
+          style={{ height: 400 + 'px' }}
           src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1599369307/har/1_rud7fj.jpg"
         />
         <img
           className="custom-shadow m-3"
-          style={{ width: 400 + 'px' }}
+          style={{ height: 400 + 'px' }}
           src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1599369307/har/2_oyldgo.jpg"
         />
         <img
           className="custom-shadow m-3"
-          style={{ width: 400 + 'px' }}
+          style={{ height: 400 + 'px' }}
           src="https://res.cloudinary.com/my-nigerian-projects/image/upload/v1599369307/har/3_n0w7r6.jpg"
         />
       </div>
