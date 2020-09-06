@@ -14,6 +14,7 @@ import LoadingDotsAnimation from './components/shared/LoadingDotsAnimation';
 import SeoDefault from './components/shared/SeoDefault';
 import BasketPage from './pages/BasketPage';
 import NotFound from './pages/404';
+import AboutPage from './pages/AboutPage';
 const ViewSingleProduct = lazy(() => import('./pages/ViewSingleProduct'));
 
 function Main() {
@@ -100,6 +101,9 @@ function Main() {
               </Route>
               <Route path="/basket">
                 <BasketPage />
+              </Route>
+              <Route path="/about">
+                <AboutPage />
               </Route>
               <Route>
                 <NotFound />
