@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import DispatchContext from '../../contextsProviders/DispatchContext';
 import StateContext from '../../contextsProviders/StateContext';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const appDispatch = useContext(DispatchContext);
@@ -28,7 +29,12 @@ function Footer() {
         </div>
       )}
       <div className="text-center">
-        <p>@{new Date().getFullYear()} Harnak Spices </p>
+        <div className="flex">
+          <p>@{new Date().getFullYear()} Harnak Spices </p>
+          <Link className="ml-3 inline-block" to="about">
+            About
+          </Link>
+        </div>
         <p className="text-gray-700 text-sm">
           <a href="https://www.dankore.com">Web design by Adamu</a>{' '}
         </p>

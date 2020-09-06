@@ -544,6 +544,10 @@ img {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -558,6 +562,10 @@ img {
 
 .hidden {
   display: none;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -654,6 +662,10 @@ img {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mx-3 {
