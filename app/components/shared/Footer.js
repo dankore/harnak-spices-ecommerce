@@ -34,6 +34,9 @@ function Footer() {
           <Link className="ml-3 inline-block" to="/about">
             About
           </Link>
+          <Link className="ml-3 inline-block" to="/branches">
+            Branches
+          </Link>
         </div>
         <p className="text-gray-700 text-sm">
           <a href="https://www.dankore.com">Web design by Adamu</a>{' '}
