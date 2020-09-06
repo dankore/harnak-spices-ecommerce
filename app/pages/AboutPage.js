@@ -4,7 +4,7 @@ import Page from '../components/shared/Page';
 function AboutPage() {
   return (
     <Page title="About Harnak Spices">
-      <div className="mt-24">
+      <div className="m">
         <h1 className="text-center">About Harnak Spices</h1>
         <div className="flex flex-wrap justify-center">
           <img
