@@ -221,11 +221,13 @@ function Navbar() {
           )}
         </div>
       </nav>
-      <div className="w-full flex justify-center py-2 mt-16 bg-gray-200">
-        <Link className="mr-3" to="/about">
+      <div className="w-full flex justify-center py-1 mt-16 bg-gray-200">
+        <Link className="mr-3 hover:text-gray-700" to="/about">
           About
         </Link>
-        <Link to="/branches">Branches</Link>
+        <Link className="hover:text-gray-700" to="/branches">
+          Branches
+        </Link>
       </div>
     </>
   );

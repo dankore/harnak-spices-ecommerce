@@ -4,7 +4,7 @@ import Branch from './Branch';
 function Branches() {
   return (
     <div className="">
-      <h1>Our Branches</h1>
+      <h1 className="text-center">Our Branches</h1>
       <div className="flex flex-wrap justify-center">
         <Branch state="ABUJA, F.C.T" phone="+234(0)803 404 2781" />
         <Branch state="GOMBE" phone="+234(0)907 716 1025" />
