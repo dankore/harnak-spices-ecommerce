@@ -10,8 +10,8 @@ function Navbar() {
     appState = useContext(StateContext);
 
   return (
-    <>
-      <nav className="bg-white border-b custom-shadow-nav w-full top-0 fixed z-10">
+    <nav>
+      <div className="bg-white border-b custom-shadow-nav w-full top-0 fixed z-10">
         <div className="relative w-full">
           <div className="max-w-7xl mx-auto px-2 lg:px-6">
             <div className="relative flex items-center justify-between h-16">
@@ -125,51 +125,7 @@ function Navbar() {
                       <i className="text-3xl text-gray-700 mr-2 fas fa-globe-africa"></i>
                       <span> Suleja, Niger State</span>
                     </div>
-                    <input type="hidden" className="bg-red-500 bg-red-600 bg-red-400" />
-                    {/* /** FOR DEVELOPER USER */}
-                    {/* <button
-                  className="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
-                  id="user-menu"
-                  aria-label="User menu"
-                  aria-haspopup="true"
-                  onClick={() => appDispatch({ type: 'toggleProfileDropdown' })}
-                >
-                  <i className="far fa-user-circle text-3xl text-gray-700"></i>
-                </button> */}
                   </div>
-
-                  {/* {appState?.toggleProfileDropdown && (
-                <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
-                  <div
-                    className="py-1 rounded-md bg-white shadow-xs"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="user-menu"
-                  >
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Your Profile
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Settings
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Sign out
-                    </a>
-                  </div>
-                </div>
-              )} */}
                 </div>
               </div>
             </div>
@@ -220,16 +176,25 @@ function Navbar() {
             </div>
           )}
         </div>
-      </nav>
-      <div className="w-full flex justify-center py-1 mt-16 bg-gray-200">
-        <Link className="mr-3 hover:text-gray-700" to="/about">
-          About
+      </div>
+      <div className="w-full flex justify-center mt-16 bg-gray-200">
+        <Link
+          className="flex py-3 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
+          to="/about"
+        >
+          <i className="text-3xl text-gray-700 mr-2 far fa-address-card"></i>
+          About Harnak Spices
         </Link>
-        <Link className="hover:text-gray-700" to="/branches">
+
+        <Link
+          className="flex py-3 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
+          to="/branches"
+        >
+          <i className="text-3xl text-gray-700 mr-2 fas fa-map-pin"></i>
           Branches
         </Link>
       </div>
-    </>
+    </nav>
   );
 }
 
