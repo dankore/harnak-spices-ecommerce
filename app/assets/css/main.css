@@ -743,6 +743,10 @@ img {
   opacity: 0.75;
 }
 
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
 .focus\:outline-none:focus {
   outline: 0;
 }
@@ -937,6 +941,12 @@ img {
   --text-opacity: 1;
   color: #2d3748;
   color: rgba(45, 55, 72, var(--text-opacity));
+}
+
+.hover\:text-red-600:hover {
+  --text-opacity: 1;
+  color: #e53e3e;
+  color: rgba(229, 62, 62, var(--text-opacity));
 }
 
 .italic {
