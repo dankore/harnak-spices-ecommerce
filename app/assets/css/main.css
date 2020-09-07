@@ -110,7 +110,6 @@ img {
  */
 
 button,
-input,
 select {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
@@ -123,8 +122,7 @@ select {
  * 1. Show the overflow in Edge.
  */
 
-button,
-input { /* 1 */
+button { /* 1 */
   overflow: visible;
 }
 
@@ -335,22 +333,6 @@ img {
   border-style: solid;
 }
 
-input::-moz-placeholder {
-  color: #a0aec0;
-}
-
-input:-ms-input-placeholder {
-  color: #a0aec0;
-}
-
-input::-ms-input-placeholder {
-  color: #a0aec0;
-}
-
-input::placeholder {
-  color: #a0aec0;
-}
-
 button {
   cursor: pointer;
 }
@@ -380,7 +362,6 @@ a {
  */
 
 button,
-input,
 select {
   padding: 0;
   line-height: inherit;
@@ -451,18 +432,6 @@ img {
   background-color: rgba(252, 129, 129, var(--bg-opacity));
 }
 
-.bg-red-500 {
-  --bg-opacity: 1;
-  background-color: #f56565;
-  background-color: rgba(245, 101, 101, var(--bg-opacity));
-}
-
-.bg-red-600 {
-  --bg-opacity: 1;
-  background-color: #e53e3e;
-  background-color: rgba(229, 62, 62, var(--bg-opacity));
-}
-
 .bg-green-600 {
   --bg-opacity: 1;
   background-color: #38a169;
@@ -491,6 +460,14 @@ img {
   --bg-opacity: 1;
   background-color: #e2e8f0;
   background-color: rgba(226, 232, 240, var(--bg-opacity));
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .border-transparent {
@@ -762,6 +739,10 @@ img {
      object-fit: cover;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .focus\:outline-none:focus {
   outline: 0;
 }
@@ -950,12 +931,6 @@ img {
   --text-opacity: 1;
   color: #b83280;
   color: rgba(184, 50, 128, var(--text-opacity));
-}
-
-.hover\:text-gray-700:hover {
-  --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .hover\:text-gray-800:hover {
