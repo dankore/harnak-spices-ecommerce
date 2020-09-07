@@ -444,6 +444,22 @@ img {
   background-color: rgba(49, 130, 206, var(--bg-opacity));
 }
 
+.bg-blue-900 {
+  --bg-opacity: 1;
+  background-color: #2a4365;
+  background-color: rgba(42, 67, 101, var(--bg-opacity));
+}
+
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
+.hover\:bg-black:hover {
+  --bg-opacity: 1;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+
 .hover\:bg-gray-200:hover {
   --bg-opacity: 1;
   background-color: #edf2f7;
@@ -743,10 +759,6 @@ img {
   opacity: 0.75;
 }
 
-.hover\:opacity-100:hover {
-  opacity: 1;
-}
-
 .focus\:outline-none:focus {
   outline: 0;
 }
@@ -941,12 +953,6 @@ img {
   --text-opacity: 1;
   color: #2d3748;
   color: rgba(45, 55, 72, var(--text-opacity));
-}
-
-.hover\:text-red-600:hover {
-  --text-opacity: 1;
-  color: #e53e3e;
-  color: rgba(229, 62, 62, var(--text-opacity));
 }
 
 .italic {
