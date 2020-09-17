@@ -62,6 +62,8 @@ module.exports = {
       category: 'grounded',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598879047/har/nobg/garam-masala_wa2y3o.png',
+      explainerImage:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1600302216/har/secondary/garamMasala.jpg',
     },
     {
       id: 8,
@@ -89,6 +91,8 @@ module.exports = {
       category: 'seeds',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878403/har/nobg/cinnamon-stick-and-powder_zumhgu.png',
+      explainerImage:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1600302216/har/secondary/cinnamonSticksPowder.jpg',
     },
     {
       id: 11,
@@ -98,6 +102,8 @@ module.exports = {
       category: 'seeds',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/nutmeg-masala_phirj7.png',
+      explainerImage:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1600302216/har/secondary/nutmegMasala.jpg',
     },
     {
       id: 12,
@@ -125,6 +131,8 @@ module.exports = {
       category: 'powder',
       image:
         'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1598878401/har/nobg/special-condiment_uykvdg.png',
+      explainerImage:
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1600302216/har/secondary/specialCond.jpg',
     },
     {
       id: 15,

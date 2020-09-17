@@ -44,29 +44,42 @@ function SingleProductHtml({ singleProduct }) {
 
           <div className="flex justify-center items-center">
             <div>
-              {/* PRICE */}
-              <div className="flex justify-center">
-                <div>
-                  <span className="text-red-600 block">
-                    <span className="text-sm">Sale:</span>{' '}
-                    <span className="text-2xl font-bold">{singleProduct.price}</span>
-                  </span>
-                  <span className="text-sm text-gray-600 -mt-2 block">
-                    Originally: {singleProduct.price + singleProduct.price * appState.DISCOUNT}
-                  </span>
+              <div>
+                {/* PRICE */}
+                <div className="flex justify-center">
+                  <div>
+                    <span className="text-red-600 block">
+                      <span className="text-sm">Sale:</span>{' '}
+                      <span className="text-2xl font-bold">{singleProduct.price}</span>
+                    </span>
+                    <span className="text-sm text-gray-600 -mt-2 block">
+                      Originally: {singleProduct.price + singleProduct.price * appState.DISCOUNT}
+                    </span>
+                  </div>
                 </div>
+                <button
+                  onClick={handleAddItem}
+                  className="preventAutoZoom relative inline-flex items-center justify-center px-10 py-1 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                >
+                  <i className="absolute left-0 ml-1 text-gray-200 fas fa-shopping-basket"></i>
+                  Add to Basket
+                  <span className="absolute right-0 mr-1">{count > 0 ? count : ''}</span>
+                </button>
               </div>
-              <button
-                onClick={handleAddItem}
-                className="preventAutoZoom relative inline-flex items-center justify-center px-10 py-1 mt-5 border border-transparent text-base leading-6 font-medium text-white bg-green-600 hover:bg-green-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-              >
-                <i className="absolute left-0 ml-1 text-gray-200 fas fa-shopping-basket"></i>
-                Add to Basket
-                <span className="absolute right-0 mr-1">{count > 0 ? count : ''}</span>
-              </button>
             </div>
           </div>
         </div>
+        {singleProduct.explainerImage && (
+          <div className="flex justify-center mt-12">
+            <img
+              onClick={() => appDispatch({ type: 'toggleImageViewer' })}
+              className="object-contain cursor-pointer"
+              src={singleProduct.explainerImage}
+              alt="Explainer image"
+              style={{ height: 500 + 'px' }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
