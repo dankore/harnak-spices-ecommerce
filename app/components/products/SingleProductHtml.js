@@ -72,8 +72,7 @@ function SingleProductHtml({ singleProduct }) {
         {singleProduct.explainerImage && (
           <div className="flex justify-center mt-12">
             <img
-              onClick={() => appDispatch({ type: 'toggleImageViewer' })}
-              className="object-contain cursor-pointer"
+              className="object-contain"
               src={singleProduct.explainerImage}
               alt="Explainer image"
               style={{ height: 500 + 'px' }}
