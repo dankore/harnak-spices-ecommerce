@@ -39,7 +39,9 @@ function Footer() {
           </Link>
         </div>
         <p className="text-gray-700 text-sm">
-          <a href="https://www.dankore.com">Web design by Adamu</a>{' '}
+          <a href="https://www.dankoresoft.com/?utm_source=harnakt&utm_medium=referral&utm_campaign=designed_by">
+            Web design by Dankore Software LLC, USA.
+          </a>
         </p>
       </div>
     </div>

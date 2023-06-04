@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const logo =
-      'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_400,f_auto/v1596194518/har/logo.png',
-    appDispatch = useContext(DispatchContext),
-    appState = useContext(StateContext);
+    'https://res.cloudinary.com/dankoresoftware/image/upload/w_400,f_auto/v1685897491/harnak/harnak-foods-logo.jpg';
+  // const logo =
+  //     'https://res.cloudinary.com/my-nigerian-projects/image/upload/w_400,f_auto/v1596194518/har/logo.png',
+  const appDispatch = useContext(DispatchContext);
+  const appState = useContext(StateContext);
 
   return (
     <nav>
