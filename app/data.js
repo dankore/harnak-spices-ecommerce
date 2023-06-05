@@ -43,7 +43,7 @@ module.exports = {
       description: 'Cardimon Ponds',
       category: 'seeds',
       image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/w_380,f_auto/v1596074523/har/WhatsApp_Image_2020-07-29_at_10.10.53_AM_1_fpux0r.jpg',
+        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1685964698/har/secondary/cardimon-ponds.png',
     },
     {
       id: 6,

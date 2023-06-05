@@ -23,7 +23,7 @@ function Products({ products }) {
                 <img
                   className="object-cover h-64 w-full cursor-pointer"
                   src={product.image}
-                  alt="product"
+                  alt={product.title}
                 />
 
                 {/* TITLE */}
