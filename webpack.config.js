@@ -57,14 +57,36 @@ config = {
       { test: /\.css$/, use: 'css-loader' },
       // IMAGE LOADER
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/images',
-              esModule: false, // add this line
+              esModule: false,
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 75,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
             },
           },
         ],
@@ -78,7 +100,7 @@ if (currentTask == 'webpackDev' || currentTask == 'dev') {
   config.devtool = 'source-map';
   config.devServer = {
     port: 3000,
-    contentBase: path.join(__dirname, 'app'),
+    static: path.join(__dirname, 'app'),
     hot: true,
     historyApiFallback: { index: 'index.html' },
   };
