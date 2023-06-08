@@ -1066,21 +1066,16 @@ h1 {
 }
 
 .dots-loading::before {
-  -webkit-animation: opacitychange 1s ease-in-out infinite;
   animation: opacitychange 1s ease-in-out infinite;
 }
 
 .dots-loading div {
-  -webkit-animation: opacitychange 1s ease-in-out 0.33s infinite;
   animation: opacitychange 1s ease-in-out 0.33s infinite;
-  -webkit-animation-fill-mode: infinite;
   animation-fill-mode: infinite;
 }
 
 .dots-loading::after {
-  -webkit-animation: opacitychange 1s ease-in-out 0.66s infinite;
   animation: opacitychange 1s ease-in-out 0.66s infinite;
-  -webkit-animation-fill-mode: infinite;
   animation-fill-mode: infinite;
 }
 

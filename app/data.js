@@ -1,6 +1,15 @@
 module.exports = {
   data: [
     {
+      id: 100,
+      title: 'Test seeds',
+      price: 600,
+      description: 'Test seeds',
+      category: 'seeds',
+      image:
+        '/app/assets/images/new/WhatsApp Image 2023-06-06 at 8.08.04 AM Background Removed.png',
+    },
+    {
       id: 1,
       title: 'Coriander Seeds',
       price: 600,

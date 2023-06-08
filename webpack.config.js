@@ -8,6 +8,7 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 class RunAfterCompile {
   apply(compiler) {
@@ -25,6 +26,9 @@ config = {
     filename: 'bundled.js',
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [{ from: 'app/assets/images', to: 'assets/images' }],
+    }),
     new Dotenv({
       path: path.resolve(__dirname, '.env'),
     }),
@@ -57,6 +61,11 @@ config = {
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images',
+              esModule: false, // add this line
+            },
           },
         ],
       },
