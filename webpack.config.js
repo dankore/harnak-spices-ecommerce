@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 class RunAfterCompile {
   apply(compiler) {
@@ -19,13 +20,41 @@ class RunAfterCompile {
 }
 
 config = {
-  entry: './app/Main.js',
+  entry: './app/main.js',
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, 'app'),
     filename: 'bundled.js',
   },
   plugins: [
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.sharpMinify,
+        options: {
+          resize: {
+            width: 800,
+            height: 1000,
+            fit: 'cover',
+            position: 'center',
+          },
+          plugins: [
+            ['gifsicle', { interlaced: true }],
+            ['jpegtran', { progressive: true }],
+            ['optipng', { optimizationLevel: 5 }],
+            [
+              'svgo',
+              {
+                plugins: [
+                  {
+                    removeViewBox: false,
+                  },
+                ],
+              },
+            ],
+          ],
+        },
+      },
+    }),
     new CopyPlugin({
       patterns: [{ from: 'app/assets/images', to: 'assets/images' }],
     }),
@@ -49,7 +78,7 @@ config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react', ['@babel/preset-env', { targets: { node: '12' } }]],
+            presets: ['@babel/preset-react', ['@babel/preset-env', { targets: { node: '20' } }]],
           },
         },
       },
@@ -63,30 +92,7 @@ config = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/images',
               esModule: false,
-            },
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 75,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
             },
           },
         ],

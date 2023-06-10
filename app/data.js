@@ -1,156 +1,100 @@
 module.exports = {
   data: [
     {
-      id: 100,
-      title: 'Test seeds',
-      price: 600,
-      description: 'Test seeds',
-      category: 'seeds',
-      image:
-        '/app/assets/images/new/WhatsApp Image 2023-06-06 at 8.08.04 AM Background Removed.png',
-    },
-    {
       id: 1,
-      title: 'Coriander Seeds',
+      title: 'Allspices powder',
       price: 600,
-      description: 'Coriander Seeds',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878403/har/nobg/corainder-seeds_jqgxlf.png',
+      description: 'Allspices powder',
+      category: 'powder',
+      image: '/assets/images/products/allspice-powder.png',
     },
     {
       id: 2,
-      title: 'Tumeric Powder',
+      title: 'Cinnamon Sticks Spice',
       price: 200,
-      description: 'Tumeric Powder',
+      description: 'Cinnamon Sticks Spice',
       category: 'grounded',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878402/har/nobg/turmeric-powder_b8unuw.png',
+      image: '/assets/images/products/cinnamon-sticks-spice.png',
     },
     {
       id: 3,
-      title: 'Fennel Seeds',
+      title: 'Dry Mint Leaves',
       price: 600,
-      description: 'Fennel Seeds',
+      description: 'Dry Mint Leaves',
       category: 'grounded',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878403/har/nobg/fennel-seeds_w2y4gg.png',
+      image: '/assets/images/products/dry-mint-leaves.png',
     },
     {
       id: 4,
-      title: 'Yaji - Chilli Seasoning',
+      title: 'Fennel Seeds Spice',
       price: 250,
-      description: 'Yaji - Chilli Seasoning',
+      description: 'Fennel Seeds Spice',
       category: 'grounded',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878402/har/nobg/yaji-chilli-seasoning_mvmdcc.png',
+      image: '/assets/images/products/fennel-seeds-spice.png',
     },
     {
       id: 5,
-      title: 'Cardimon Ponds',
+      title: 'Garam Masala',
       price: 800,
-      description: 'Cardimon Ponds',
+      description: 'Garam Masala',
       category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/v1685964698/har/secondary/cardimon-ponds.png',
+      image: '/assets/images/products/garam-masala.png',
     },
     {
       id: 6,
-      title: 'Cuming Seeds',
+      title: 'Masala Seasonning',
       price: 600,
-      description: 'Cuming Seeds',
+      description: 'Masala Seasonning',
       category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878403/har/nobg/cumming-seeds_icb9o6.png',
+      image: '/assets/images/products/masala-seasoning.png',
     },
     {
       id: 7,
-      title: 'Garam Masala Cooking Spice',
+      title: 'Mix Masala',
       price: 500,
-      description: 'Garam Masala Cooking Spice',
+      description: 'Mix Masala',
       category: 'grounded',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598879047/har/nobg/garam-masala_wa2y3o.png',
-      explainerImage:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1600302216/har/secondary/garamMasala.jpg',
+      image: '/assets/images/products/mix-masala.png',
     },
     {
       id: 8,
-      title: 'Star Anise',
+      title: 'Oregano Spice',
       price: 600,
-      description: 'Star Anise',
+      description: 'Oregano Spice',
       category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878401/har/nobg/star_anise_yhdmv6.png',
+      image: '/assets/images/products/oregano-spice.png',
     },
     {
       id: 9,
-      title: 'Dry Mushroom',
-      price: 400,
-      description: 'Dry Mushroom',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878402/har/nobg/dry-mushroom_xknhvm.png',
-    },
-    {
-      id: 10,
-      title: 'Cinnamon Stick and Powder',
-      price: 400,
-      description: 'Cinnamon Stick and Powder',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878403/har/nobg/cinnamon-stick-and-powder_zumhgu.png',
-      explainerImage:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1600302216/har/secondary/cinnamonSticksPowder.jpg',
-    },
-    {
-      id: 11,
-      title: 'Nutmeg Masala',
-      price: 500,
-      description: 'Nutmeg Masala',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878401/har/nobg/nutmeg-masala_phirj7.png',
-      explainerImage:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1600302216/har/secondary/nutmegMasala.jpg',
-    },
-    {
-      id: 12,
-      title: 'Oregano',
-      price: 500,
-      description: 'Oregano',
-      category: 'seeds',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878402/har/nobg/oregano_mfy8tr.png',
-    },
-    {
-      id: 13,
-      title: 'Ginger Powder',
-      price: 500,
-      description: 'Ginger Powder',
-      category: 'powder',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878401/har/nobg/ginger-powder_e0e6cp.png',
-    },
-    {
-      id: 14,
       title: 'Special Condiment',
       price: 400,
       description: 'Special Condiment',
-      category: 'powder',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1598878401/har/nobg/special-condiment_uykvdg.png',
-      explainerImage:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1600302216/har/secondary/specialCond.jpg',
+      category: 'seeds',
+      image: '/assets/images/products/special-condiment.png',
     },
     {
-      id: 15,
-      title: 'Fenugreek Powder',
+      id: 10,
+      title: 'Spice Tea',
       price: 400,
-      description: 'Fenugreek Powder',
-      category: 'powder',
-      image:
-        'https://res.cloudinary.com/my-nigerian-projects/image/upload/f_auto/v1599220068/har/nobg/fenucreek_seeds_and_powder_sz0ebu.png',
+      description: 'Spice Tea',
+      category: 'seeds',
+      image: '/assets/images/products/spice-tea.png',
+    },
+    {
+      id: 11,
+      title: 'Star Anise Powder Spices',
+      price: 500,
+      description: 'Star Anise Powder Spices',
+      category: 'seeds',
+      image: '/assets/images/products/star-anise-powder-spices.png',
+    },
+    {
+      id: 12,
+      title: 'Turmeric Spice Powder',
+      price: 500,
+      description: 'Turmeric Spice Powder',
+      category: 'seeds',
+      image: '/assets/images/products/turmeric-spice-powder.png',
     },
   ],
 };

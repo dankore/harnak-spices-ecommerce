@@ -30,7 +30,7 @@ function Footer() {
       )}
       <div className="text-center">
         <div className="flex">
-          <p>@{new Date().getFullYear()} Harnak Spices </p>
+          <p>@{new Date().getFullYear()} Harnak Foods </p>
           <Link className="ml-3 inline-block" to="/about">
             About
           </Link>

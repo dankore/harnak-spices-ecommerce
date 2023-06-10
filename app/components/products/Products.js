@@ -20,11 +20,7 @@ function Products({ products }) {
                 className="border mb-5 lg:mb-0 custom-shadow"
                 key={product.id}
               >
-                <img
-                  className="object-cover h-64 w-full cursor-pointer"
-                  src={product.image}
-                  alt={product.title}
-                />
+                <img className="w-full cursor-pointer" src={product.image} alt={product.title} />
 
                 {/* TITLE */}
                 <p className="text-center text-xl text-gray-800 semi-bold">{product.title}</p>
