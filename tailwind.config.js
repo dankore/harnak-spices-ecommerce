@@ -1,12 +1,5 @@
 module.exports = {
-  purge: {
-    mode: 'all',
-    content: ['./app/**/*.js', './app/**/*.jsx'],
-  },
-  target: 'relaxed',
-  prefix: '',
-  important: false,
-  separator: ':',
+  content: ['./app/**/*.{js,jsx,html}'],
   theme: {
     screens: {
       sm: '640px',

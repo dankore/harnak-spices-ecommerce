@@ -33,8 +33,8 @@ function SingleProductHtml({ singleProduct }) {
       </h1>
 
       {/* SINGLE PRODUCT HTML */}
-      <div style={{ background: '#f8f9fa' }} className="py-12">
-        <div className="custom-shadow pb-3 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+      <div className="py-12">
+        <div className="custom-shadow pb-3 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto bg-white">
           <img
             onClick={() => appDispatch({ type: 'toggleImageViewer' })}
             className="w-full cursor-pointer"
