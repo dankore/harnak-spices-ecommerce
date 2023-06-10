@@ -16,7 +16,10 @@ function Homepage() {
             <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
               {/* background */}
             </div>
-            <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50"></div>
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-green-900 opacity-80 lg:rounded-b-lg"
+            ></div>
             <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center lg:px-0">
               <img
                 alt="Logo"
@@ -30,7 +33,7 @@ function Homepage() {
                 Fresh Ingredients Make Delicious Food
               </h1>
               <p className="mt-4 text-xl text-white">
-                Suprice your taste buds - <span className="text-red-600 italic">NOW 23% OFF!</span>
+                Suprice your taste buds - <span className="text-red-700 italic">NOW 23% OFF!</span>
               </p>
               <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">

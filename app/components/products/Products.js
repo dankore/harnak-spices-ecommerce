@@ -9,12 +9,12 @@ function Products({ products }) {
   return (
     <>
       {products.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
           {products.map(product => {
             return (
               <Link
                 to={`/product/${product.id}`}
-                className="border mb-5 lg:mb-0 custom-shadow bg-white"
+                className="border mb-5 md:mb-0 custom-shadow bg-white"
                 key={product.id}
               >
                 <img className="w-full cursor-pointer" src={product.image} alt={product.title} />
