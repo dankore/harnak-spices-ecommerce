@@ -20,7 +20,7 @@ function Homepage() {
               aria-hidden="true"
               className="absolute inset-0 bg-green-900 opacity-80 lg:rounded-b-lg"
             ></div>
-            <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center lg:px-0">
+            <div className="relative mx-auto flex max-w-3xl flex-col items-center py-24 px-6 text-center lg:px-0">
               <img
                 alt="Logo"
                 src="assets/images/logo-new.jpeg"
@@ -29,17 +29,20 @@ function Homepage() {
                 loading="lazy"
                 style={{ color: 'transparent' }}
               />
-              <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl mt-5">
-                Fresh Ingredients Make Delicious Food
+              <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl mt-12">
+                Natural, Healthy and Tasty Spices and Food
               </h1>
               <p className="mt-4 text-xl text-white">
-                Suprice your taste buds - <span className="text-red-700 italic">NOW 23% OFF!</span>
+                Suprice your taste buds -{' '}
+                <span className="mx-2 relative inline-block after:w-full after:-rotate-2 after:absolute after:content-[''] after:h-[5px] after:bottom-0 after:left-0 after:block after:bg-orange-600 after:bg-gradient-to-r after:from-green-500 after:via-pink-500 after:to-orange-500">
+                  NOW 23% OFF!
+                </span>
               </p>
               <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">
                   <a
                     href="tel:+234(0)803 404 2781"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-700 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-700 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

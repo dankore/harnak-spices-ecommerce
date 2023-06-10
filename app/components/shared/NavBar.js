@@ -179,7 +179,11 @@ function Navbar() {
           )}
         </div>
       </div>
-      <div className="w-full flex justify-center mt-16 bg-gray-200">
+      <div className="w-full flex flex-wrap justify-center mt-16 bg-gray-200 space-x-5">
+        <Link className="flex py-3 px-2 items-center active:bg-gray-300 hover:bg-gray-200" to="/">
+          <i className="text-3xl text-gray-700 mr-2 fas fa-home"></i>
+          Home
+        </Link>
         <Link
           className="flex py-3 px-2 items-center active:bg-gray-300 hover:bg-gray-200"
           to="/about"
