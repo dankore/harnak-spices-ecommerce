@@ -13,8 +13,8 @@ function AboutPage() {
                   About Harnak Foods
                 </h1>
                 <p className="mt-6 text-xl leading-8 text-gray-600">
-                  Harnak Foods is a leading provider of high-quality spices and food products. We
-                  are committed to delivering the best in food quality and taste.
+                  Harnak Foods is a leading provider of high-quality spices and food products in
+                  Nigeria. We are committed to delivering the best in food quality and taste.
                 </p>
                 <p className="mt-6 text-base leading-7 text-gray-600">
                   We understand the importance of flavor in every dish, and that&apos;s why we are

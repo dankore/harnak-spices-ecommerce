@@ -2,19 +2,17 @@
   "name": "harnak-spices-ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "app/main.js",
+  "main": "app/Main.js",
   "scripts": {
     "dev": "npm-run-all -s lint:fix generate webpackDev",
     "webpackDev": "webpack-dev-server",
     "build": "npm-run-all -s generate build:css webpackBuild",
     "webpackBuild": "webpack",
     "generate": "babel-node --presets=@babel/preset-react,@babel/preset-env generateHtml.js",
-    "previewDist": "node previewDist",
     "build:css": "npx tailwindcss -i app/assets/css/tailwind.css -o app/assets/css/main.css",
     "watch:css": "npx tailwindcss -i app/assets/css/tailwind.css -o app/assets/css/main.css --watch",
     "lint": "eslint app",
-    "lint:fix": "eslint --fix .",
-    "test_server": "node _tests_/test_server"
+    "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
