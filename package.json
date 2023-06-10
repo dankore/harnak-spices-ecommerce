@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/main.js",
   "scripts": {
-    "dev": "npm-run-all -s lint:fix watch:css generate webpackDev",
+    "dev": "npm-run-all -s lint:fix generate webpackDev",
     "webpackDev": "webpack-dev-server",
     "build": "npm-run-all -s generate build:css webpackBuild",
     "webpackBuild": "webpack",
@@ -36,6 +36,8 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",

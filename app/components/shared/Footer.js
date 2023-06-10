@@ -38,9 +38,9 @@ function Footer() {
             Branches
           </Link>
         </div>
-        <p className="text-gray-700 text-sm">
+        <p className="text-gray-700 text-sm mt-5">
           <a href="https://www.dankoresoft.com/?utm_source=harnakt&utm_medium=referral&utm_campaign=designed_by">
-            Web design by Dankore Software LLC, USA.
+            Powered by Dankore Software LLC, USA.
           </a>
         </p>
       </div>

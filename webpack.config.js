@@ -54,6 +54,7 @@ config = {
           ],
         },
       },
+      include: /images\/products/, // This will only include images in the 'images/products' directory
     }),
     new CopyPlugin({
       patterns: [{ from: 'app/assets/images', to: 'assets/images' }],

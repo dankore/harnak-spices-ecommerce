@@ -9,7 +9,7 @@ function Products({ products }) {
   return (
     <>
       {products.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 lg:p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           {products.map(product => {
             return (
               <Link
