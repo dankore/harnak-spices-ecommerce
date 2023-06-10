@@ -52,14 +52,14 @@ function Navbar() {
               <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
                 <Link to="/" className="flex-shrink-0">
                   <img
-                    className="block lg:hidden h-12 w-auto"
+                    className="block lg:hidden h-10 w-auto rounded-lg"
                     src={logo}
-                    alt="Harnak Spices logo"
+                    alt="Harnak Foods logo"
                   />
                   <img
-                    className="hidden lg:block h-12 w-auto"
+                    className="hidden lg:block h-10 w-auto rounded-lg"
                     src={logo}
-                    alt="Harnak Spices logo"
+                    alt="Harnak Foods logo"
                   />
                 </Link>
 
@@ -185,7 +185,7 @@ function Navbar() {
           to="/about"
         >
           <i className="text-3xl text-gray-700 mr-2 far fa-address-card"></i>
-          About Harnak Spices
+          About Harnak Foods
         </Link>
 
         <Link

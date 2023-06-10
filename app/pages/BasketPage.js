@@ -101,13 +101,13 @@ function BasketPage() {
       <div className="w-full">
         {basketItemsUnique.length > 0 ? (
           <>
-            <h2 className="max-w-5xl text-xl mx-auto pl-2">
+            <h2 className="max-w-5xl text-xl mx-auto pl-2 pt-12">
               <strong>Your cart:</strong>{' '}
               {appState.basket.length > 1
                 ? appState.basket.length + ' items'
                 : appState.basket.length + ' item'}{' '}
             </h2>
-            <div className="py-12" style={{ background: '#f8f9fa' }}>
+            <div className="py-12">
               <div className="max-w-5xl mx-auto custom-shadow p-5 lg:hidden mb-5">
                 <div className="mb-5 flex justify-between w-full">
                   <p>Grand total</p>
@@ -155,7 +155,7 @@ function BasketPage() {
                                 data-item={`${JSON.stringify(item)}`}
                                 data-previousval={`${basketItemIds[item.id]}`}
                                 onChange={handleChange}
-                                className="flex-none bg-gray-100 px-2 py-1 border border-gray-400 ml-2"
+                                className="flex-none px-2 py-1 border border-gray-400 ml-2"
                               >
                                 <option>{basketItemIds[item.id]}</option>
                                 <option>1</option>

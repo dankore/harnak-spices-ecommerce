@@ -8,6 +8,8 @@ const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 class RunAfterCompile {
   apply(compiler) {
@@ -25,6 +27,38 @@ config = {
     filename: 'bundled.js',
   },
   plugins: [
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.sharpMinify,
+        options: {
+          resize: {
+            width: 800,
+            height: 1000,
+            fit: 'cover',
+            position: 'center',
+          },
+          plugins: [
+            ['gifsicle', { interlaced: true }],
+            ['jpegtran', { progressive: true }],
+            ['optipng', { optimizationLevel: 5 }],
+            [
+              'svgo',
+              {
+                plugins: [
+                  {
+                    removeViewBox: false,
+                  },
+                ],
+              },
+            ],
+          ],
+        },
+      },
+      include: /images\/products/, // This will only include images in the 'images/products' directory
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'app/assets/images', to: 'assets/images' }],
+    }),
     new Dotenv({
       path: path.resolve(__dirname, '.env'),
     }),
@@ -53,10 +87,14 @@ config = {
       { test: /\.css$/, use: 'css-loader' },
       // IMAGE LOADER
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              esModule: false,
+            },
           },
         ],
       },
@@ -69,7 +107,7 @@ if (currentTask == 'webpackDev' || currentTask == 'dev') {
   config.devtool = 'source-map';
   config.devServer = {
     port: 3000,
-    contentBase: path.join(__dirname, 'app'),
+    static: path.join(__dirname, 'app'),
     hot: true,
     historyApiFallback: { index: 'index.html' },
   };
@@ -81,8 +119,8 @@ if (currentTask == 'webpackBuild') {
   config.output = {
     publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
   };
 }
 
