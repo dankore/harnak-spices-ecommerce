@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { formatTitleAndDescription } from '../../helpers/JSHelpers';
 
 function SeoDefault() {
-  const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594491219/free-background-press-v2_pg66nf.svg`;
+  const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1714767695/har/cuujzf38vv6d3mekhjog.png`;
   const description = `Find the best African spices online.`;
   const title = `Shop online for your spices`;
 
