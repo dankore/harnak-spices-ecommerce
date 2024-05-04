@@ -4,9 +4,9 @@ import Products from '../components/products/Products';
 import { data } from '../data';
 
 function Homepage() {
-  const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1594491219/free-background-press-v2_pg66nf.svg`;
+  const image = `https://res.cloudinary.com/my-nigerian-projects/image/upload/v1714767695/har/cuujzf38vv6d3mekhjog.png`;
   const description = `Find the best African spices online.`;
-  const title = `Shop online for your spices | Harnak Foods`;
+  const title = `Shop online for your spices`;
 
   return (
     <Page title={title} image={image} description={description}>
@@ -30,10 +30,10 @@ function Homepage() {
                 style={{ color: 'transparent' }}
               />
               <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl mt-12">
-                Natural, Healthy and Tasty Spices and Food
+                Natural, Healthy, and Tasty Spices and Food
               </h1>
               <p className="mt-4 text-xl text-white">
-                Suprice your taste buds -{' '}
+                Suprise your taste buds -{' '}
                 <span className="mx-2 relative inline-block after:w-full after:-rotate-2 after:absolute after:content-[''] after:h-[5px] after:bottom-0 after:left-0 after:block after:bg-orange-600 after:bg-gradient-to-r after:from-green-500 after:via-pink-500 after:to-orange-500">
                   NOW 23% OFF!
                 </span>
